@@ -1,0 +1,6 @@
+<h3><?php foreach($this->posts as $post){
+    
+    echo "'".$post->getTitle()."'".' by '.$post->getAuthor(). ' written on ' . $post->getDate().'</br>';
+    
+    echo $post->getPost();
+}?></h3>

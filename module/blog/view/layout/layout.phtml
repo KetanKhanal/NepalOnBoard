@@ -1,0 +1,40 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Nepal on board -blog') ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+            ->appendHttpEquiv('Content-Language', 'en')
+            ->appendName('description','Nepalonboard, an airline ticket booking system crafted for everyone')
+            ->appendName('apple-mobile-web-app-capable','yes')
+            ->appendName('keywords','airline,ticket,booking,system,Nepal,travel,online travel,nepalonboard.com,plane,aeroplane,flights,holiday')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => '', 'href' => $this->basePath() . 'img/finalLogoTogo.ico'))
+            ->prependStylesheet($this->basePath('bower_components/font-awesome/css/font-awesome.min.css'))
+            ->prependStylesheet($this->basePath('css/style.css'))
+            ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+            ->prependStylesheet($this->basePath('bower_components/fullpage.js/dist/jquery.fullpage.css'))
+            ->prependStylesheet($this->basePath('bower_components/animsition/dist/css/animsition.min.css'))?>
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath('bower_components/jquery-ui/jquery-ui.min.js'))
+            ->prependFile($this->basePath('javascript/onboard.blog.js'))
+            ->prependFile($this->basePath('js/bootstrap.js'))
+            ->prependFile($this->basePath('bower_components/animsition/dist/js/animsition.min.js'))   
+            ->prependFile($this->basePath('js/jquery.min.js'))
+            ->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath('js/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',)); 
+        ?>
+    </head>
+    <body>    
+        <?php echo $this->content; ?> 
+   
+    </body>
+</html>

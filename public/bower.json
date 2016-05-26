@@ -1,0 +1,27 @@
+{
+  "name": "NepalOnBoard",
+  "description": "coolest project ever",
+  "main": "index.php",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "authors": [
+    "Ketan"
+  ],
+  "dependencies":[
+      
+  ], 
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

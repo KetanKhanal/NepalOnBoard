@@ -1,0 +1,677 @@
+html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
+    width:100%;
+    height:100%;
+    margin:0px;
+    color: #003366;
+    margin-bottom:0px;   
+    font-family: Lato;
+}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 60%, 100%  { -webkit-transform: translateY(0); }
+        40%{ -webkit-transform: translateY(-20px); }
+	80% { -webkit-transform: translateY(-10px); }
+}
+@keyframes bounce{
+        0%, 20%, 60%, 100%  { transform : translateY(0); }
+        40%{ transform: translateY(-20px); }
+	80% { transform: translateY(-10px); }
+}
+
+.contactdetails{
+    font-size: 1.3em;
+    margin-left:0.5em;
+    
+}
+.contactdetailscontainer{
+   width:50%;
+   color:#000000;
+}
+#upperconnect{
+    margin-top:0.9em;
+}
+
+#menu-options-container{
+    position:relative;
+    background-color:#ffffff;
+    width:100%;
+    height: 100% !important;
+}
+.thirdPageBg{
+    background-image:url('../img/aboutPic.jpg') !important;
+}
+#about-us-heading{
+    font-family: mr !important;
+    font-size: 5em;
+    color:#000000;
+    text-align:center;
+}
+.mathi3level{
+    z-index: 800 !important;
+}
+#we{
+    padding:1em;
+    color:#ffffff;
+    font-size: 1.5em;
+    font-family: Lato !important;
+    text-rendering: optimizeLegibility !important;
+    text-shadow:1px 1px 1px #000000;
+}
+.aboutFeatures{
+    padding:1em;
+    color:white;
+    border:2px solid #003366;
+    background-color:rgba(51,51,51,0.3);
+    text-align: justify;
+    font-family:Lato !important;
+    text-shadow:1px 1px 1px #000000;
+    height:280px;
+    font-size:1.3em;
+    
+}
+
+#about-features-container{
+  margin-top:20px;
+}
+.insideAboutPicContainer{
+    padding-left:38%;
+}
+
+.insideAboutPic{
+    border-radius:100%;
+    border:2px solid #003366;
+    width:80px;
+    background-color: #ffffff;
+    margin-left:40%;
+}
+#house-pic{
+    right:0;
+}
+#plane-pic{
+    left:0 !important;
+    border-left:none;
+    
+}
+.featuresHeading{
+    text-align:left;
+    font-family: Lato !important;
+    margin-bottom: 0.5em;
+    height:80px;
+    
+    
+}
+
+.menu{
+   
+    background-color: white;
+    border-radius:50%;
+    border : 4px solid black;
+    width: 16em;
+    
+}
+
+.optionName{
+    position:relative;
+    left:0em;
+    width:auto;
+    text-align: left;
+    color:white;
+    font-family : Lato ;
+    font-weight: bolder !important;
+    
+}
+.optionName > h3{
+    font-size:3em;
+    font-family : Lato !important;
+}
+.upperOptionName{
+    width:auto !important;
+    left:5em !important;
+    text-align:left;
+    
+}
+.optionName > h3:hover{
+    color:black;
+    cursor:pointer;
+    
+}
+#nepOnboardImage{
+    margin-left:4em ;
+    width:400px;
+    height:400px
+}
+.menuContent * {
+   font-family: Lato !important;
+}
+.menuContent > *{
+    display: block;
+}
+.mathi{
+    z-index: 300;
+}
+#last-options:after{
+    display:block;
+    height: 3em;
+}
+
+.mathi2{
+    z-index: 500 !important;
+}
+.dhakeko{
+    position:absolute;
+    top:0px;
+    left: 0px;
+    z-index: 100;
+    background-color:   #3383C8;
+  
+    width: 100%;
+    height:100%;
+    opacity:0.6;
+}
+#background-video{
+    z-index :  -2;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+   
+}
+#our-slider-container{
+    position:absolute !important;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    z-index: -2;
+    
+}
+#our-slider,.carousel-inner{
+    height:100%;
+}
+#first-slide{
+      background-image:url('../img/window.jpg');
+    
+    width:inherit;
+    height:100%;
+}
+#second-slide{
+    background-image:url('../img/airport6.jpg');
+    width:inherit;
+    height:100%;
+}
+.try{
+    border:1px solid white !important;
+    height: 23em !important;
+        
+}
+.try >*:hover{
+    background-color:yellow;
+}
+
+#third-slide{
+   background-image:url('../img/student22.jpg');
+    width:inherit;
+    height:100%;
+}
+#fourth-slide{
+  background-image:url('../img/Student35.jpg');
+    width:inherit;
+    height:100%;
+   
+}
+#articleHeading{
+    margin-left:0.7em;
+}
+#second-Page{
+    padding:0px !important;
+    background-image: -webkit-linear-gradient(top  , #43cea2, #185a9d);
+
+    background-color: #e6dada;
+}
+#us,#contact,#article{
+    padding-left:9em;
+    margin-top:6em;
+}
+.lowerhr{
+  margin-top:0px;
+  margin-right:8em;
+  margin-left:-2em;
+  margin-bottom: 1em;
+ 
+    
+}
+#first-Page{
+    padding:0px !important;
+}
+.upper,.belowComingSoon{
+ height:auto;
+}
+.lower{
+    width:12em;
+}
+.lowerIm{width:150px;height:150px;}
+.lowerOption{
+    padding-left:0.3em;
+    
+}
+.uppermenu{
+    height:18em;
+    width:20em;
+    padding-left:1.2em;
+    padding-top:3em;
+    
+}
+.functionalityIcon{
+    padding:0px;
+}
+#plane{
+    padding-top:5em !important;
+  
+}
+.p{
+        margin-top: 1em;
+    margin-left: 0.5em;
+}
+.NepalOnBoardContainer{
+    padding:0px;
+}
+
+@media (max-width:320px){
+    html,body{
+        overflow-y: scroll;
+        width:100%;
+        height:100%;
+        margin:0px;
+        color: #003366;
+        margin-bottom:0px; 
+        padding:0px !important;
+      
+    }
+    #menu-options-container{
+        top:3em;
+    }
+    .hiddenFor{
+        display:block !important;
+        
+    }
+    #mission-statement-section{
+         margin-top:-1em;
+    }
+    #mission-statement{
+        font-size: 1.5em !important;
+        color:black !important;
+       
+    }
+    
+    .arrowContainer, #arrow-wrapper{
+        display:none;
+    }
+    #background-video{
+        display:none;
+    }
+    .burgerMenu{
+        display:none;
+    }
+    #mobile-burger-menu{
+        position:absolute !important;
+        top:21.5em;
+        left:8em;
+        
+    }
+    #b-m{
+        padding:0px !important;
+    }
+    #topMostBlock{
+        margin:0px;
+        padding:0px;
+    }
+    #socialMediaContainer{
+        margin-top:0px !important;
+    }
+    #nepOnboardImage{
+        width:200px;
+        height:200px;
+        margin-left:3em !important;
+    }
+}
+@media (min-width:1680px){
+    html,body{
+        overflow-y: scroll;
+        height:100%;
+        width:100%;
+        margin:0px;
+    }
+    #nepOnboardImage{
+        display: none;
+    }
+    #mission-statement-section:after{
+        display:block;
+        height:23em;
+    }
+    #third-slide{
+        background-image:url('../img/1680/student2.jpg');
+        width:inherit;
+        height:100%;
+    }
+    #fourth-slide{
+        background-image:url('../img/1680/allgates.jpg');
+        width:inherit;
+        height:100%;
+    }
+    #first-slide{
+        background-image:url('../img/1680/Student.jpg');
+        width:inherit;
+        height:100%;
+    }
+    #second-slide{
+        background-image:url('../img/1680/airport1.jpg');
+        width:inherit;
+        height:100%;
+    }
+}
+/*Basic styles for Nepal on board elements*/
+.NepalOnBoardUl{        /* All Nepal on board Unordered list elements*/ 
+    list-style:none;
+}
+.NepalOnBoardli{        /* All Nepal on board list elements */ 
+    color:#003366;
+}
+.NepalOnBoardLink{      /* All Nepal on board link elements */ 
+    color:#000000 !important;
+}   
+.NepalOnBoardLink:hover{
+    color:#003366 !important;
+    cursor:pointer;
+    text-decoration: none;
+}
+/*End Level one styles for Nepal on board elements*/
+
+/*  for Social media icons*/
+#socialMediaContainer{
+    margin-top:2em;
+}
+#social-media-ul{
+    display:block;
+}
+#social-media-li{
+    display:block;
+    margin-bottom: 1em;
+}
+#social-media-facebook:hover{
+    color:#3b5998;
+}
+#social-media-twitter:hover{
+    color:#4099ff;
+}
+#social-media-linkedin:hover{
+    color:#0077b5;
+}
+#social-media-pinterest:hover{
+    color:firebrick;
+}
+#social-media-youtube:hover{
+    color:#cd201f;
+    
+}
+#social-media-instagram:hover{
+    color:#a82400;
+    
+}
+#socialMediaContainer{
+    color:#003366;
+    padding-left:0px;
+}
+/* End social media icons*/
+
+/* Start Mission Statement */
+#mission-statement-section:after{
+    display:block;
+    height:4em;
+}
+
+.burgerMenu{
+    padding:0px;
+    margin:0px;
+    width:100%;
+
+}
+#b-m{
+    padding-left:4.4em;
+    
+}
+
+.burgerMenu:after{
+    display:block;
+    height:0.5em;
+    position:fixed !important;
+
+}
+
+#mission-statement-container{
+    text-align: center;
+}
+#mission-statement{
+
+    font-size: 5em;
+    font-family: mr !important;
+    letter-spacing:0px;
+    font-weight: normal;
+    font-style: oblique;
+    color:#ffffff;
+}
+/* End Mission Statement*/
+#form-container{
+    padding-top:1em;
+    background-color:#003366;
+    border-radius: 10px;
+}
+
+#hail-button{
+    border-radius:0px;
+    margin:0;
+    height:46px;
+    border:1px solid transparent;
+    position:relative;
+    top:-3px;
+    color:black;
+    font-family:LATO;
+    font-weight: bold;
+}
+
+#messageForm{
+    padding-left:2.3em;
+}
+.messageContainer{
+    text-align:center;
+    
+}
+#feedbackbutton{
+    font-family: Montserrat-Regular;
+    color:#000000;
+    font-size:1.5em;
+    margin-left:1em;
+    height:auto;
+    background:-webkit-linear-gradient(right, #4B97E4, #A7EDC3);
+    background:-moz-linear-gradient(right,#232526, #414345);
+    border:2px solid #000000;
+}
+
+.social{
+    color:#000000;
+}
+.message{
+    font-family: Lato ;
+    font-size: 1.7em;
+    color:black;
+}
+.formHeading {
+    margin-top:0;
+    text-align: center;
+    
+}
+.feedbacklabel{
+    width:100px;
+    font-family:Montserrat-Hairline;
+    font-size: 1.5em;
+}
+.feedbackicons{
+    position:absolute;
+    top:3.3em;
+    left:1.3em;
+}
+
+#lowerconnect{
+    margin-top:2em;
+}
+.nobsocial{
+    margin-left:1em;
+}
+.nobinput{
+    padding-left:2em;
+    width:100%;
+    border-color : #003366;
+    border-width : 1px;
+    border-radius: 0;
+    background-image : -webkit-radial-gradient(circle,#ffffff 40%,#FFEEEE,  #DDEFBB );
+}
+#feedback-textarea{
+    height:11em;
+}
+.contactblock{
+    border:3px solid #003366;
+    padding:1em;
+    color:#000000;
+   
+}
+#form-header{
+    padding:0;
+    text-align: center;
+    margin-top:0.5em;
+    margin-bottom:2.5em;
+    border-bottom: 1px solid #003366;
+}
+#form-header > h2{
+    font-family:Montserrat-Regular;
+  
+}
+#contactblockcontainer{
+     margin-top:2em;
+     
+     
+}
+#messageOnSubmission{
+    height:0.1em;
+    font-size:1.5em !important;
+}
+#top-most-block:after{
+    height:2em;
+}
+#underConstruction{
+    position:absolute;
+    height:25em;
+
+}
+
+#ud{
+    height: inherit;
+    
+    z-index: 100;
+  
+}
+#down-arrow{
+    color:#ffffff !important;
+
+}
+#hacha{
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+     animation-name: bounce;
+     animation-duration:2s;
+     animation-iteration-count: infinite;
+     
+}
+
+.arrowContainer{
+    padding-left:11.5em;
+}
+
+/* Start footer */
+#footer{
+    width:100%;
+    height:100px;
+    padding-top:1em;
+    padding-bottom:1em;
+    margin:0px;
+    padding:0px;
+}
+#footer:after{
+    height:0px !important;
+    display:none;
+}
+.slanted{
+    font-family:mr !important;
+    color:#ffffff;
+    font-size:4em;
+    text-align: center;
+    
+}
+.ButtonContainer{
+    padding : 0px;
+    height: inherit; 
+}
+
+.NepalOnBaordButton{
+    width:10em !important;
+    height:inherit;
+
+}
+.customSlider{
+    position:absolute !important;
+    top:0 !important;
+    left:0 !important;
+    width:inherit;
+    height:inherit;
+    
+}
+/*Hidden divs for 320 px device*/
+.hiddenFor{
+    display:none;
+}
+/*End hidden divs for 320px device*/
+
+/* End footer*/
+@font-face{
+    font-family: Xtravagant; 
+    src:url(../fonts/Xtravagant.ttf);
+}
+
+@font-face{
+    font-family:Montserrat-Hairline; 
+    src:url(../fonts/Montserrat-Hairline.otf) format('opentype');
+}
+@font-face{
+    font-family:Montserrat-Regular;
+    src:url(../fonts/Montserrat-Regular.otf);
+}
+@font-face{
+    font-family:Lato;
+    src:url('../fonts/Lato-regular.ttf');
+}
+@font-face{
+    font-family:mr;
+    src:url('../fonts/Mr Dafoe regular.ttf');
+}
+@font-face{
+    font-family:arvo;
+    src:url('../fonts/Arvo Regular.ttf');
+}
+@font-face{
+    font-family: droid;
+    src: url('../fonts/Droid Sans Mono regular.ttf');
+}
+
+@font-face{
+    font-family: open;
+    src : url('../fonts/Open Sans regular.ttf');
+}
