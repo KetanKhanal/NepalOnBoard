@@ -156,9 +156,10 @@ initial = {
             if(window.location.pathname.indexOf('/blog/writer/')>-1){
                 me.generateDropZone();// generate dropzone if it is writers screen
                 FB.getLoginStatus(function(){
-                    FB.api('/me?fields=id',function(res){                         
+                    FB.api('/me?fields=id,email',function(res){                         
                     $('#fbidinput').val(res.id);//get fb id of the user and set value of fbinput field which is hidden as the user id
-                });
+                    (res.email==='' )?null:$('#fbemail').val(res.email);
+                    });
                 });
             }
             $(document).on('click','#share-button',function(){

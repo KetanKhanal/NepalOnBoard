@@ -3,21 +3,28 @@
     <div class="col-md-9 col-sm-9">
         <form role="form" method="post"  id="postform" >   
             <div class="col-md-12 form-group">
-                <fieldset><legend> Blog Title </legend></fieldset>
+                <fieldset><legend> Post Title </legend></fieldset>
                 <span>
                     <input placeholder="maximum character 50" class="form-control nobinput" name="blogPost[title]" id="blogTitle" type="text">               
                     <input type="hidden" name="blogPost[date]" value="2016-06-7">
                     <input type="hidden" name="blogPost[fbId]" id="fbidinput">
+              
                 </span>
             </div>
               <div class="col-md-12 form-group">
-                <fieldset><legend> Blog Author </legend></fieldset>
+                <fieldset><legend> Post Author </legend></fieldset>
                 <span>      
                     <input class="form-control nobinput" name="blogPost[author]" value="<?php echo $this->writer;?>"/>
                 </span>
             </div>
+            <div id="author-email" class="col-md-12 form-group">
+                <fieldset><legend> Email </legend></fieldset>
+                <span>
+                    <input class="form-control nobinput" type="email" name="blogPost[email]" id="fbemail">
+                </span>
+            </div>
             <div class="col-md-12 form-group">
-                <fieldset><legend> Description </legend></fieldset>
+                <fieldset><legend> Post Description </legend></fieldset>
                 <span>
                     <input placeholder="maximum character 150" class="form-control nobinput" name="blogPost[description]" id="blogDescription" type="text"/>
                 </span>

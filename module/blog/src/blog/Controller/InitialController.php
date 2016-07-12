@@ -23,6 +23,7 @@ use Zend\View\Model\JsonModel as jsonmodel;
 use Zend\Filter\PregReplace as replacer;
 use Zend\Form\Element;
 use Zend\Session\Validator\ValidatorInterface;
+use blog\utils\mailGenerator;
 
 class InitialController extends AbstractActionController{
     
@@ -132,6 +133,7 @@ class InitialController extends AbstractActionController{
             $view->setVariables(['result'=>false,'message'=>$resultFromSave[Post::MESSAGE]]);
             return $view;
         }
+        mailGenerator::GENERATEEMAIL($postData['blogPost']['email']);
         return $view;
     }
     

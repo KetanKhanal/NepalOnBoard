@@ -72,4 +72,5 @@ class Post implements NobModelInterface,  NobModel {
     public function setStatus($status){
        $this->status = $status;
     }
+
 }
