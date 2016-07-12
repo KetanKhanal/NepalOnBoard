@@ -133,7 +133,7 @@ class InitialController extends AbstractActionController{
             $view->setVariables(['result'=>false,'message'=>$resultFromSave[Post::MESSAGE]]);
             return $view;
         }
-        mailGenerator::GENERATEEMAIL($postData['blogPost']['email']);
+        //mailGenerator::GENERATEEMAIL($postData['blogPost']['email']);
         return $view;
     }
     

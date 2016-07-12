@@ -12,8 +12,8 @@
  * @author User
  */
 namespace blog\utils;
-use Zend\Validator\File\ImageSize;
-use Zend\Validator\File\MimeType;
+use Zend\Validator\File\Size;
+use Zend\Validator\File\Extension;
 class fileSaver {
     
     /*This static function saves image file for blog post*/
@@ -23,27 +23,30 @@ class fileSaver {
         $newname           = 'post'.$postid;//create new name for the file
         $new               = $newname.'.'.$extension;//add the extension to the new file name
         /*Use zend validator class to check the size of the image*/
-        $imageSizeValidator = new ImageSize([
-            'max'=>'1MB' // allow maimum size one mb
+        $imageSizeValidator = new Size([
+            'max'=>'2MB' // allow maimum size one mb
         ]); 
         
         /*Use zend image type validator to check the type of the image*/
-        $imageTypeValidator = new MimeType([
-            ['image/jpeg','image/jpg','image/pjepg'] // allow only image with these types
+        $imageTypeValidator = new Extension([
+            'case'=>true,
+            'extension'=>[
+                'jpg','jpeg'
+            ]
         ]);
-        
         /*Use php function getcwd to get the main working directory*/
         $path = getcwd() . '/public/img/posts/'.$new;    
         
+        /*check to see if the file size is less that equal to allowed size*/
+        if(!$imageSizeValidator->isValid($file['file'][0])){
+            return [false,'Sorry! the file size is more than '.$imageSizeValidator->getMax()];
+        }
         /*check to see if the type of the file is allowed*/
         if(!$imageTypeValidator->isValid($file['file'][0])){
             return [false,'Sorry! only .jpg files are allowed'];
         }
         
-        /*check to see if the file size is less that equal to allowed size*/
-        if(!$imageSizeValidator->isValid($file['file'][0])){
-            return [false,'Sorry! the file size is more than '.$imageSizeValidator->getImageMax()];
-        }
+        
         
         /*if everything goes according to planed then move the uploaded file from temp directory to the the image folder.
           return flase on error with error message. */
