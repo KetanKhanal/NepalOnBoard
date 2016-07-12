@@ -7,6 +7,122 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     font-family: Lato;
 }
 
+ #writer-below-section{
+        margin-top:5%;
+ }
+#writer-heading-for-phone{
+    display:none;
+}
+#the-drop-zone{
+    height:150px;
+    width:50%;
+    color:black
+}
+#add-button,#cancel-button{
+    margin-bottom:0.5em;
+}
+.post-upload-btns{
+    margin-left:0.5em;
+}
+#login-fb{
+    display:none;
+    margin-left:25%;
+    font-family: Lato !important;
+}
+#userNameContainer{
+ text-align: center;   
+}
+#user{
+    color:white;
+    font-family: Lato !important;
+}
+#share-your-experience-block{
+    padding-top:3.5%;
+}
+.contactDetailsContainer{
+    margin-bottom:2em ;
+}
+#follow-us{
+color:white !important;padding:0.5em;border:3px double white;width:43%;font-family: cicle !important;margin-left:1.5%;
+}
+#saveY{
+    margin-left:-42%;margin-top: -0.2em;text-shadow:1px 1px 1px black;
+}
+#loading{
+    background-image:url('../img/loading.gif.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    display:none;
+   z-index:2000;position:absolute;top:37%;left:45%;width:100px;height: 100px;;
+   
+}
+#continue-with{
+    background-color: #3b5998;
+    border-radius: 5px;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    color: white;
+    top: 7em;
+    margin-left: 20%;
+}
+
+
+#continue-with span{
+    font-family: Lato!important;
+}
+#leave-comment-heading{
+    position:relative;top:-1em;text-align: center;
+    border-top:1px groove #000000;
+}
+#leave-comment-heading> h3{
+    background-color: white;
+    width: 27%;
+    margin-left: 35%;
+    margin-top: -1.5%;
+}
+.nepalOnboardBack{
+   background-size: cover;
+   background-position:center;
+   background-repeat: no-repeat;
+   -ms-background-position:center;
+   -ms-background-size:cover;
+   height:inherit;
+}
+#error-message-container{
+    display:none;
+    width:100%;
+    padding-left:2em;
+}
+#first-slide{
+   background-image: url('../img/man.jpg') !important;
+}
+
+#below-mission-statement{
+    text-align: center;
+    color:#ffffff;
+    font-family: cicle !important;
+}
+
+#below-mission-statement> h1{
+    font-family: cicle !important;
+}
+.importantWord{
+    color:rgb(76, 168, 8);
+}
+#fourth-page{
+    background-color:rgba(226,243,255,0.58);
+}
+#formblock legend{
+    color: #ffffff;
+    font-family:feb !important;
+    font-size: 1.8em !important;
+}
+.menu-icons{
+    width:150px;
+    height:150px;
+}
 @-webkit-keyframes bounce {
 	0%, 20%, 60%, 100%  { -webkit-transform: translateY(0); }
         40%{ -webkit-transform: translateY(-20px); }
@@ -21,11 +137,18 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
 .contactdetails{
     font-size: 1.3em;
     margin-left:0.5em;
-    
+    font-weight: bold;
 }
-.contactdetailscontainer{
-   width:50%;
-   color:#000000;
+#copyright{
+        height: auto;
+    padding: 0.5em;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top:80%;
+}
+#phone-number-container{
+  margin-bottom: 1em;
 }
 #upperconnect{
     margin-top:0.9em;
@@ -52,8 +175,8 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
 #we{
     padding:1em;
     color:#ffffff;
-    font-size: 1.5em;
-    font-family: Lato !important;
+    font-size: 1.8em;
+    font-family: feb !important;
     text-rendering: optimizeLegibility !important;
     text-shadow:1px 1px 1px #000000;
 }
@@ -63,10 +186,10 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     border:2px solid #003366;
     background-color:rgba(51,51,51,0.3);
     text-align: justify;
-    font-family:Lato !important;
+    font-family:feb !important;
     text-shadow:1px 1px 1px #000000;
     height:280px;
-    font-size:1.3em;
+    font-size:1.6em;
     
 }
 
@@ -100,7 +223,14 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     
     
 }
-
+featuresHeading{
+    text-align:left;
+    font-family: Lato !important;
+    margin-bottom: 0.5em;
+    height:80px;
+    
+    
+}
 .menu{
    
     background-color: white;
@@ -136,7 +266,7 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     
 }
 #nepOnboardImage{
-    margin-left:4em ;
+    margin-left:15% ;
     width:400px;
     height:400px
 }
@@ -188,17 +318,7 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
 #our-slider,.carousel-inner{
     height:100%;
 }
-#first-slide{
-      background-image:url('../img/window.jpg');
-    
-    width:inherit;
-    height:100%;
-}
-#second-slide{
-    background-image:url('../img/airport6.jpg');
-    width:inherit;
-    height:100%;
-}
+
 .try{
     border:1px solid white !important;
     height: 23em !important;
@@ -208,24 +328,14 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     background-color:yellow;
 }
 
-#third-slide{
-   background-image:url('../img/student22.jpg');
-    width:inherit;
-    height:100%;
-}
-#fourth-slide{
-  background-image:url('../img/Student35.jpg');
-    width:inherit;
-    height:100%;
-   
-}
 #articleHeading{
-    margin-left:0.7em;
+    margin-left:1em;
 }
 #second-Page{
     padding:0px !important;
     background-image: -webkit-linear-gradient(top  , #43cea2, #185a9d);
-
+    background-image: -moz-linear-gradient(top  , #43cea2, #185a9d);
+    background-image: -ms-linear-gradient(top  , #43cea2, #185a9d);
     background-color: #e6dada;
 }
 #us,#contact,#article{
@@ -269,14 +379,25 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
   
 }
 .p{
-        margin-top: 1em;
+    margin-top: 1em;
     margin-left: 0.5em;
 }
 .NepalOnBoardContainer{
     padding:0px;
 }
+.aboutIcons{
+    height:75px;
+    width:75px;
+}
 
-@media (max-width:320px){
+#author-search , #author-search-button{
+    border-radius : 0 !important;
+    
+}
+#author-search-button{
+    background-image:-webkit-linear-gradient(right, #4B97E4, #A7EDC3);
+}
+@media (max-width:750px){
     html,body{
         overflow-y: scroll;
         width:100%;
@@ -287,51 +408,407 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
         padding:0px !important;
       
     }
+    .forPhone{
+        display:none;
+    }
+   
+    #writer-heading-for-phone{
+        display:block;
+        color:black;
+        text-align: center;
+        margin-bottom:10%;
+    }
+    #user{
+        font-size: 1.2em;
+    }
+    #the-drop-zone{
+        display:none;
+    }
+    #writer-top-section{
+        display:none;
+    }
+    #writer-below-section{
+        margin-top:5%;
+    }
+    #continue-with{
+        margin-left:0%;
+        font-size:75%;
+        width:100% !important;
+    }
+   #share-your-experience-block {
+    padding-top: 1.5%;
+}
+    #author-search-form> .form-group{
+        padding-left:0 !important;
+    }
+    #copyright{
+        top:10em;
+        position:relative !important;
+        color:black !important;
+        font-size: 1em !important;
+        width:100% !important;
+    }
+    #follow-us{
+color:black !important;font-weight: bold;padding:0.5em;border:3px double black;width:34%;font-family: cicle !important;margin-left:1.5%;font-size:1.2em;
+    }
+    #saveY{
+        margin-left:0 !important;
+    }
+    #loading{
+
+top:37%;left:37%;
+    }
+    #about-us-heading{
+        font-family: mr !important;
+        font-size: 2em;
+        color:#000000;
+        text-align:center;
+    }
+    #we{
+        padding:1em;
+        color:#ffffff;
+        font-size: 1em;
+        font-family: feb !important;
+        text-rendering: optimizeLegibility !important;
+        text-shadow:1px 1px 1px #000000;
+    }
+    .aboutFeatures{
+        padding:1em;
+        color:white;
+        border:2px solid #003366;
+        background-color:rgba(51,51,51,0.3);
+        text-align: justify;
+        font-family:feb !important;
+        text-shadow:1px 1px 1px #000000;
+        height:auto;
+        font-size:1em;
+    
+    }
+    #about-plane{
+        margin-top:15px;
+    }
+    #about-features-container{
+        margin-top:10px;
+    }
+    .insideAboutPic{
+        border-radius:100%;
+        border:2px solid #003366;
+        width:44px;
+        background-color: #ffffff;
+        margin-left:40%;
+    }
+    .insideAboutPic img{
+        height:40px !important;
+        width:40px !important;
+    }
+    .featuresHeading{
+        text-align:left;
+        font-family: feb !important;
+        margin-bottom: 0.1em;
+        height:50px;
+    }
+    .feedbacklabel{
+        width:inherit;
+        font-family:Montserrat-Hairline;
+        font-size: 1em !important;
+    }
+    #formblock legend{
+        font-size: 1em !important ;
+        color:black ;
+    }
+    #formblock {
+        padding-left: 0px;
+    }
+    #error-message-container{
+        font-size:1em !important;
+    }
+    
+    .form-group{
+        padding-left:5px !important;
+    }
+    .nobinput{
+        height:20px;
+        padding-left:2em;
+        width:100%;
+        border-color : #003366;
+        border-width : 1px;
+        border-radius: 0;
+        background:white;
+    }
+    .result{  
+        width:20px !important;
+        height:20px !important;
+    }
+    #feedback-textarea{
+        height:5em !important;
+    }
+    #feedbackbutton{
+        font-family: Montserrat-Regular;
+        color:#000000;
+        font-size:1em !important;
+        height:auto;
+        
+        border:2px solid #000000;
+    }
+    .nobsocial{
+        margin-left:0.8em !important;
+    }
+    #right-phone{
+        margin-left:0.8em !important;
+    }
+   
+    #social-media-facebook{
+        color:rgb(145, 220, 90);
+        margin-left:0.4em !important;
+    }
+    #social-media-twitter{
+        color:#4099ff;
+    }
+    #social-media-linkedin{
+        color:#0077b5;
+    }
+    #social-media-pinterest{
+        color:firebrick;
+    }
+    #social-media-youtube{
+        color:#cd201f;
+
+    }
+    #social-media-instagram{
+        color:#a82400;
+
+    } 
+    #social-media-googleplus{
+        color:red;
+    }
+    .contactdetails{
+        font-size: 1em;
+        margin-left:0.2em;
+    }
+    .contactdetailscontainer{
+        width:50%;
+        color:#000000 !important;
+    }
+    #blog-menu-nav{
+        font-size:1em !important;
+
+    }
+    #blog-menu-nav-container{
+        position:relative !important;
+        top:40% !important;
+    }
+    #form-header{
+        padding:0 !important;
+        text-align: center;
+        margin-top:0.1em !important;
+        margin-bottom:1.1em !important;
+        border-bottom: 1px solid #003366;
+    }
+    #form-header > h2{
+        font-family:Montserrat-Regular;
+        font-size: 1.3em !important;
+    }
+    .messageContainer{
+        height:auto !important;
+       
+    }
+    .messageContainer >*{
+        font-size:1.2em !important;
+       
+    }
+    #ourMessageContainer{
+        margin-top:3.6em;
+        
+    }
+    .message{
+        color:#ffffff ;
+    }
     #menu-options-container{
         top:3em;
     }
-    .hiddenFor{
-        display:block !important;
+    #us,#contact,#article{
+        padding-left:0;
+        margin-top:1em;
+        height:auto;
+        width: auto;
+        padding-right: 0;
+    }
+    #contact{
+        margin-left:1.3em;
+        margin-right:1.3em;
+    }
+    .menu{
+        background-color: white;
+        border-radius:50%;
+        border : 2px solid black;
+        width: 5.5em;
         
+    }
+    .lowerhr{
+        visibility:hidden;
+    }
+    
+   
+    .optionName{
+        position:relative;
+        left:0em;
+        width:auto;
+        text-align: left;
+        color:white;
+        font-family : Lato ;
+        font-weight: bolder !important;
+
+    }
+    .optionName > h3{
+        font-size:1.2em;
+        font-family : Lato !important;
+        text-shadow : 2px 1px 1px #003366;
+    }
+    .menu-icons{
+        height:70px;
+        width: 70px;
     }
     #mission-statement-section{
          margin-top:-1em;
     }
     #mission-statement{
-        font-size: 1.5em !important;
-        color:black !important;
-       
+        font-size: 2.5em !important;
+        color:white !important;  
     }
-    
-    .arrowContainer, #arrow-wrapper{
-        display:none;
-    }
-    #background-video{
-        display:none;
-    }
-    .burgerMenu{
-        display:none;
-    }
-    #mobile-burger-menu{
-        position:absolute !important;
-        top:21.5em;
-        left:8em;
+    #below-mission-statement> h1{
+        font-size:1em;
         
     }
-    #b-m{
-        padding:0px !important;
+   #home-logo{
+       display: none !important;
+    }
+    #blog-navbar #home-logo{
+        display:inline !important;
+        display: inline !important;
+        position: relative;
+        left: -1%;
+        top: 27%;
+    }
+    #blog-navbar #home-logo > img{
+       display:inline !important;
+       height:50px !important;
+       width:50px !important;
     }
     #topMostBlock{
         margin:0px;
         padding:0px;
     }
-    #socialMediaContainer{
-        margin-top:0px !important;
+    #form-container{
+        padding-bottom:1px !important;
+    }
+   .arrowContainer{
+        padding-left :0 !important;
+    }
+    .socialMediaContainer{
+        margin-top:5px !important;
+        padding-left:0px !important;
+        position:relative;
+        float:left;
+        margin-bottom:0 !important;
     }
     #nepOnboardImage{
-        width:200px;
-        height:200px;
-        margin-left:3em !important;
+        width:250px;
+        height:250px;
+        margin:0 ;
+    }
+    #contact-top{
+       position:absolute;
+       top:0;
+       left:0;
+       background:white;
+    }
+    #contactblockcontainer{
+        position : relative;
+        top:7em;
+   
+    }
+    #formblock{
+        background-color:#3c3636f !important;
+    }
+    #contact-background-pic-container{
+        display:none;
+    }
+    #social-media-info-container{
+        position:relative;
+        padding-left:0;
+        color:black !important;
+    }
+    .contactDetailsContainer{
+        padding:0;
+        margin-bottom:1em !important;
+    }
+    .contactIcons{
+        width:30px !important;
+        height:30px !important;
+    }
+    .feedbackicons{
+        position:absolute;
+        top:3.2em !important;
+        left:1.3em;
+    }
+    #blog-header h1{
+        font-size: 4em !important;
+    }
+    #blog-navbar{
+     height:75px !important;
+     width:100%;
+     text-align:center;
+     
+    }
+    
+    .line:before , .line:after{
+        display:none !important;
+    }
+    #blog-image{
+        width:100%;
+        height:290px !important;
+        margin-top:0 !important;
+    }
+    .posts{
+        height:200px !important;
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor:pointer;
+        margin-bottom:1em;
+    }
+    #post-text-content{
+        top:-5.8em !important;
+        position:relative;
+    }
+    #post-text-content p{
+        margin-top:0 !important;
+    }
+    #post-content-top{
+        top: -3.4em !important;
+        left: 0em !important;      
+    }
+    #post-title-container{
+        top:-2.5em !important;
+        left: 0em !important;
+    }
+    #post-content{
+        color:black;
+        font-family : feb !important;
+        font-size : 1.4em !important;
+        background:white;      
+    }
+    #post-content-top> h2{
+        font-family:  feb !important;
+        font-weight: bold;
+        font-size:1.8em !important;
+    }
+     .sort{
+        margin-bottom:1em ;
+        width:100% !important;
+    }
+     .thisForPhone{
+        height:7em !important;
     }
 }
 @media (min-width:1680px){
@@ -341,33 +818,102 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
         width:100%;
         margin:0px;
     }
+    #share-your-experience-block{
+        padding-top:2.5%;
+    }
+    #saveY{
+        margin-left:-57% !important;
+    }
     #nepOnboardImage{
-        display: none;
+        display: block;
+        height:500px;
+        width:500px;
+        margin-left:0 !important;
+    }
+    
+    #mission-statement{
+        font-size: 6em !important;
     }
     #mission-statement-section:after{
         display:block;
         height:23em;
     }
-    #third-slide{
-        background-image:url('../img/1680/student2.jpg');
-        width:inherit;
-        height:100%;
+    
+    .slanted{
+        font-size : 7em !important;
     }
-    #fourth-slide{
-        background-image:url('../img/1680/allgates.jpg');
-        width:inherit;
-        height:100%;
+    .arrowContainer{
+        padding-left:9.5em !important;
     }
-    #first-slide{
-        background-image:url('../img/1680/Student.jpg');
-        width:inherit;
-        height:100%;
+    #form-container{
+        padding-left:1em !important;
     }
-    #second-slide{
-        background-image:url('../img/1680/airport1.jpg');
-        width:inherit;
-        height:100%;
+    #form-container input {
+        width:85% !important;
     }
+    #emailid{
+        height:60px;
+    }
+    #icon{
+        
+        top: 30px!important;
+    }
+    #hail-button{
+        height:60px!important;
+    }
+    
+    .message{
+        font-size: 2.3em !important;
+    }
+    #ourMessageContainer{
+        margin-top:20px;
+    }
+    .menu-icons{
+        width:250px !important;
+        height:250px !important;
+    }
+    .aboutIcons{
+        height:95px !important;
+        width:95px !important;
+    }
+    .lower{
+        width:19em !important;
+        margin-left:9%;
+    }
+    .lowerOption{
+        padding-left:15% !important;
+    }
+    .lowerhr{
+        margin-right:15% !important;
+        margin-left:-10%;
+    }
+    .optionName > h3{
+        font-size:4em !important;
+    }
+    #about-us-heading{
+        font-size:7em !important;
+    }
+    .insideAboutPic{
+        width:99px !important;
+    }
+    .aboutFeatures{
+        font-size: 1.8em !important;
+        height:320px;
+    }
+    #contactblockcontainer{
+            margin-top: 5%;
+    }
+    .featuresHeading{
+        margin-bottom:1.5em;
+    }
+    #we{
+        font-size: 2em !important;
+    }
+    
+    .line:before, .line:after{
+        width:42% !important;
+    }
+ 
 }
 /*Basic styles for Nepal on board elements*/
 .NepalOnBoardUl{        /* All Nepal on board Unordered list elements*/ 
@@ -375,6 +921,8 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
 }
 .NepalOnBoardli{        /* All Nepal on board list elements */ 
     color:#003366;
+    margin-bottom:1em;
+    
 }
 .NepalOnBoardLink{      /* All Nepal on board link elements */ 
     color:#000000 !important;
@@ -386,10 +934,7 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
 }
 /*End Level one styles for Nepal on board elements*/
 
-/*  for Social media icons*/
-#socialMediaContainer{
-    margin-top:2em;
-}
+
 #social-media-ul{
     display:block;
 }
@@ -397,29 +942,18 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     display:block;
     margin-bottom: 1em;
 }
-#social-media-facebook:hover{
-    color:#3b5998;
+.social{
+    color:rgb(145, 220, 90) !important;
 }
-#social-media-twitter:hover{
-    color:#4099ff;
+
+.social:hover{
+    color:black !important;
 }
-#social-media-linkedin:hover{
-    color:#0077b5;
-}
-#social-media-pinterest:hover{
-    color:firebrick;
-}
-#social-media-youtube:hover{
-    color:#cd201f;
-    
-}
-#social-media-instagram:hover{
-    color:#a82400;
-    
-}
-#socialMediaContainer{
+
+
+.socialMediaContainer{
     color:#003366;
-    padding-left:0px;
+    margin-bottom:2em;
 }
 /* End social media icons*/
 
@@ -453,12 +987,14 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
 #mission-statement{
 
     font-size: 5em;
-    font-family: mr !important;
+    font-family:cicle !important;
     letter-spacing:0px;
-    font-weight: normal;
-    font-style: oblique;
+    font-weight: bold;
+    text-shadow:1px 1px 1px black;
+    margin-top:0 !important;
     color:#ffffff;
 }
+
 /* End Mission Statement*/
 #form-container{
     padding-top:1em;
@@ -477,25 +1013,31 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     font-family:LATO;
     font-weight: bold;
 }
-
+#icon{
+    color:lightgray !important;z-index:200;position:absolute;left:0.6em;top:24px;
+}
 #messageForm{
-    padding-left:2.3em;
+    padding-left:0;
 }
 .messageContainer{
     text-align:center;
     
 }
-#feedbackbutton{
+#feedbackbutton,#submitPost{
     font-family: Montserrat-Regular;
     color:#000000;
     font-size:1.5em;
-    margin-left:1em;
+    width:100%;
     height:auto;
     background:-webkit-linear-gradient(right, #4B97E4, #A7EDC3);
-    background:-moz-linear-gradient(right,#232526, #414345);
+    background:-moz-linear-gradient(right,#4B97E4,#A7EDC3) ;
+    background:-ms-linear-gradient(right,#4B97E4,#A7EDC3) ;
     border:2px solid #000000;
 }
-
+.contactIcons{
+    height: 50px;
+    width: 50px;
+}
 .social{
     color:#000000;
 }
@@ -516,10 +1058,18 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
 }
 .feedbackicons{
     position:absolute;
-    top:3.3em;
+    top:4.2em ;
     left:1.3em;
 }
-
+.result{
+    display:none;
+    width:40px;
+    height:40px;
+    position:absolute;
+    top:0.3em;
+    right:2em;
+    
+}
 #lowerconnect{
     margin-top:2em;
 }
@@ -532,16 +1082,15 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     border-color : #003366;
     border-width : 1px;
     border-radius: 0;
-    background-image : -webkit-radial-gradient(circle,#ffffff 40%,#FFEEEE,  #DDEFBB );
+    background:#ffffff;
+    color:black !important;
 }
 #feedback-textarea{
     height:11em;
 }
 .contactblock{
-    border:3px solid #003366;
-    padding:1em;
-    color:#000000;
-   
+    padding:0.4em;
+    color:#000000;  
 }
 #form-header{
     padding:0;
@@ -554,14 +1103,10 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     font-family:Montserrat-Regular;
   
 }
-#contactblockcontainer{
-     margin-top:2em;
-     
-     
-}
+
 #messageOnSubmission{
     height:0.1em;
-    font-size:1.5em !important;
+    font-size:1.5em ;
 }
 #top-most-block:after{
     height:2em;
@@ -621,11 +1166,26 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     height: inherit; 
 }
 
+#contact-top{
+    width:100% !important;
+    height:80px;
+}
+#contact-container{
+    margin-top: 0px;
+    text-align: center;
+}
+#contact-heading{
+    font-family: mr;
+    margin-top:5px !important;
+    font-size: 4em;
+    color: #000000 !important;
+}
 .NepalOnBaordButton{
     width:10em !important;
     height:inherit;
 
 }
+
 .customSlider{
     position:absolute !important;
     top:0 !important;
@@ -641,11 +1201,263 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
 /*End hidden divs for 320px device*/
 
 /* End footer*/
+
+
+/*Blog css start */
+
+#blog-navbar{
+    position:fixed;
+    padding:0px;
+    z-index: 1000;
+    background:#000000;
+    top:0;
+    height:100px;
+}
+#sort-block,#upload-form-heading{
+    margin:0px;
+    padding-top:2%;
+    padding-left:1.5%;
+    background-color:#ffffff;
+    height:auto;
+    margin-bottom:1.5%;
+
+}
+#upload-form-heading{
+    text-align:center;
+}
+
+.shareYourExperience{
+    color:#ffffff;
+    border-bottom:1px groove white;
+    cursor:pointer;
+    font-family: ptbold ;
+}
+.shareYourExperience:hover{
+  text-decoration :none;
+  border-bottom-color: green !important;
+  color:white;
+}
+.modal-dialog{
+    margin-top:10% !important;
+}
+.modal-content{
+    background-color:#dbd8d8 ;
+}
+.modal-footer{
+    border-top-color: #ffffff !important;
+}
+.modal-header {
+    margin-bottom:1em;
+    background-color:#ffffff;
+    text-align: center;
+    color:#000000;
+
+}
+#modal-title{
+    font-family: ptbold !important;
+}
+.sort{
+    color:black;
+    font-family: ptbold ;
+    width:100%;
+    background-image:-webkit-linear-gradient(right, #4B97E4, #A7EDC3);
+}
+.sort:hover{
+    color:#ffffff;
+    border:1px groove white;
+}
+.sort:active{
+    color:#ffffff;
+}
+.thePosts{
+    margin-top:3%;
+}
+#new-post{
+    margin:0px;
+    padding-top:2%;
+    background-color:#ffffff;
+    height:100%;
+}
+.bodyClass{
+    background-color: #DBDBDB;
+}
+.posts{
+    height:300px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor:pointer;
+    margin-bottom:1em;
+    
+}
+.postContainer{
+    margin-bottom:2em;
+}
+.postDetailContainer{
+    font-family: feb !important;
+    color:#000000;
+    height:auto;
+}
+.postTitle{
+    font-size:2em;
+    text-shadow : 1px 1px 1px gray;
+}
+.postContent::before{
+    display:block;
+    height:10px;
+    content:'';
+   
+}
+.postContent{
+    font-size:1.3em;
+    text-align: justify !important;
+    font-weight: bold;
+    color: rgba(67, 52, 52, 0.84);
+}
+.postLable{
+    font-family: mr !important;
+
+    font-size: 1.8em;
+}
+.blogSelection{
+    display: block;
+    width:100% !important; 
+    height:100% !important;
+    outline:2px groove #ffffff;
+    outline-offset:-0.5em;
+}
+#share-button,#like-button{
+    z-index:100;
+}
+#share-button:hover{
+    cursor:pointer;
+}
+
+.blogSelection:hover{
+    background-color:rgba(255, 162, 162, 0.28);
+}
+#blog-header{
+    color: #ffffff;
+}
+#blog-header h1{
+    font-family: dyane;
+    font-size: 6em;
+    margin:0;
+}
+.line:before {
+    left:-6px;
+}
+.line:before , .line:after{
+    position : relative;
+    content:'';
+    display:inline-block;
+    border-bottom:1px groove #ffffff;
+    border-top:1px groove #ffffff;
+    width:42% ;
+    height:5px;
+    color:white;
+}
+#blog-body{
+    color:#ffffff !important;
+    position:relative; 
+    top: 92px;
+    background:transparent;
+    padding:0px;
+    display:block;
+    height: 100%;
+}
+#post-content{
+    color:black;
+    font-family : feb !important;
+    font-size : 1.8em;
+    background:white;  
+    
+}
+#blog-image{
+    width:100%;height:auto;margin-top:-8em;
+}
+#post-text-content:before{
+    height:10px;
+    display:block;
+    content:'';
+}
+#post-text-content{
+    top:-3em;
+    position:relative;
+}
+#post-content-top{
+    font-family: mr !important;
+    position: relative;
+    background-color: transparent;
+    top: -3em;
+    left: -2.2em;
+}
+#post-author{
+    background-color:black;
+    height:76px;
+    color:grey;
+}
+#post-title-container{
+    top:-1.5em;
+    background-color:white;
+    left: 2em;
+}
+#post-content-top> h2{
+    font-family:  feb !important;
+    font-weight: bold;
+    font-size:2em ;
+}
+.fixIt{
+    position : fixed;
+}
+
+.readmore{
+    padding-left:7%;
+    
+}
+#home-logo{
+    margin:0px;
+    z-index: 2000 !important;
+    top:1em;
+}
+#home-logo:hover{
+    cursor:pointer;
+}
+#blog-menu-nav{
+    color:white !important; text-decoration: underline; font-size:1.5em;
+}
+#post-author {
+    color:grey;
+}
+
+#contact-pic{
+    height:100%;
+    width:100%;
+    
+}
+#contact-background-pic-container{
+  position:absolute;
+  top:80px;
+  left:0;
+}
+#social-media-info-container{
+ padding-top:0.4em;  
+ color: #ffffff ; 
+ font-family: feb !important;
+}
+
+.f .fp-tableCell{
+    height:705px !important;
+}
+/* Blog css end*/
 @font-face{
     font-family: Xtravagant; 
     src:url(../fonts/Xtravagant.ttf);
 }
-
+@font-face{
+    font-family: cicle; 
+    src:url('../fonts/Cicle Fina.ttf');
+}
 @font-face{
     font-family:Montserrat-Hairline; 
     src:url(../fonts/Montserrat-Hairline.otf) format('opentype');
@@ -659,6 +1471,10 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     src:url('../fonts/Lato-regular.ttf');
 }
 @font-face{
+    font-family:feb;
+    src:url('../fonts/Febrero-Regular.otf');
+}
+@font-face{
     font-family:mr;
     src:url('../fonts/Mr Dafoe regular.ttf');
 }
@@ -667,11 +1483,478 @@ html,body,#second-Page,#first-Page,#third-Page,#dhakeko{
     src:url('../fonts/Arvo Regular.ttf');
 }
 @font-face{
-    font-family: droid;
-    src: url('../fonts/Droid Sans Mono regular.ttf');
+    font-family: dyane;
+    src: url('../fonts/Dyane Regular.ttf');
 }
-
+@font-face{
+    font-family: tattle;
+    src: url('../fonts/TattleandTales.ttf');
+}
 @font-face{
     font-family: open;
     src : url('../fonts/Open Sans regular.ttf');
+}
+@font-face{
+    font-family: ptbold;
+    src : url('../fonts/PT Sans Narrow 700.ttf');
+}
+
+@media  (max-device-width:750px) and (orientation:landscape){
+  #nepOnboardImage{
+        width:170px !important;
+        height:170px !important;
+        margin-left:36% !important;
+    }
+    #mission-statement-section:after {
+        display: block;
+        height: 2em;
+    }
+    .arrowContainer {
+        padding-left: 5% !important;
+    }
+    .menuList{
+        padding-left:27% !important;
+    }
+    
+  .slanted{
+      font-size:2em !important;
+  }
+  #emailid{
+    padding-left: 9% !important;
+    height:30px !important;
+  }
+  #icon{
+      top:14% !important;
+      left:5% !important;
+  }
+  #hail-button{
+      height:25px !important;
+      left: 42% !important;
+  }
+  .messageContainer >* {
+    font-size: 1em !important;
+  }
+  #ourMessageContainer {
+    margin-top: 1.5em;
+  }
+  #mission-statement-section {
+    margin-top: -3em;
+  }
+}
+
+@media (min-width:750px) and (max-width:1000px){
+    #nepOnboardImage{
+        margin-left:23% !important;
+    }
+    .sort{
+    width:100%;
+    margin-bottom:0.5em;
+}
+     #follow-us{
+        width:46% !important;
+    }
+     #saveY{
+        margin-left:-34% !important;
+    }
+    #mission-statement{
+        font-size: 3.5em !important;
+    }
+    #mission-statement-section:after{
+        display:block;
+        height:4em;
+    }
+    .arrowContainer{
+        padding-left:3.5em !important;
+    }
+    #form-container{
+        padding-left:1em !important;
+    }
+    #form-container input {
+        width:85% !important;
+    }
+    #emailid{
+        height:60px;
+    }
+    .menuList{
+        margin-top:3em;
+    }
+    #us, #contact, #article {
+        padding-left: 5%;
+    }
+    #icon{
+        
+        top: 30px!important;
+    }
+    #hail-button{
+        height:60px!important;
+    }
+    
+    .message{
+        font-size: 1.7em !important;
+    }
+    #ourMessageContainer{
+        margin-top:12%;
+    }
+
+    .aboutIcons{
+        height:95px !important;
+        width:95px !important;
+    }
+    .lower{
+        width:11.5em !important;
+    }
+    .lowerOption{
+        padding-left:15% !important;
+    }
+    .lowerhr{
+        margin-right:15% !important;
+        margin-left:-10%;
+    }
+    .optionName > h3{
+        font-size:2em !important;
+    }
+    #about-us-heading{
+        font-size:3em !important;
+    }
+    .insideAboutPic{
+        width:99px !important;
+    }
+    .aboutFeatures{
+        font-size: 1.8em !important;
+        height:320px;
+    }
+
+    .featuresHeading{
+        margin-bottom:1.5em;
+    }
+    #we{
+        font-size: 2em !important;
+    }
+    #home-logo{
+       display: none !important;
+    }
+    #blog-navbar #home-logo{
+        display:inline !important;
+        display: inline !important;
+        position: relative;
+        left: -1%;
+        top: 1%;
+    }
+    #blog-navbar #home-logo > contact-background-pic-container{
+       display:inline !important;
+       height:50px !important;
+       width:50px !important;
+    }
+    
+    .line:before, .line:after{
+        width:10% !important;
+    }
+     #blog-header h1{
+        font-size: 4em !important;
+    }
+    #blog-navbar{
+     height:70px !important;
+     width:100%;
+     text-align:center;
+     
+    }
+    #share-your-experience-block {
+        padding-top: 2.5%;
+    }
+    .line:before , .line:after{
+        display:none !important;
+    }
+    #blog-image{
+        width:100%;
+        height:290px !important;
+        margin-top:0 !important;
+    }
+    .posts{
+        height:200px !important;
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor:pointer;
+        margin-bottom:1em;
+    }
+    #post-text-content{
+        top:-5.8em !important;
+        position:relative;
+    }
+    #post-text-content p{
+        margin-top:0 !important;
+    }
+    #post-content-top{
+        top: -3.4em !important;
+        left: 0em !important;      
+    }
+    #post-title-container{
+        top:-2.5em !important;
+        left: 0em !important;
+    }
+    #post-content{
+        color:black;
+        font-family : feb !important;
+        font-size : 1.4em !important;
+        background:white;      
+    }
+    #post-content-top> h2{
+        font-family:  feb !important;
+        font-weight: bold;
+        font-size:1.8em !important;
+    }
+    #blog-menu-nav{
+        font-size:1em !important;
+    }
+    #blog-menu-nav-container{
+        position:relative !important;
+        top:20% !important;
+    }
+    #contact-top {
+        background: white;
+    }
+    #formblock legend {
+        color: #000000;
+    }
+    #social-media-info-container {
+        color: #000000;
+    }
+}
+
+@media (min-width:1000px) and (max-width:1290px){
+    #nepOnboardImage{
+        margin-left:0% !important;
+    }
+    
+    #saveY{
+        margin-left:-26% !important;
+    }
+    #mission-statement{
+        font-size: 3.5em !important;
+    }
+    #mission-statement-section:after{
+        display:block;
+        height:4em;
+    }
+    #follow-us{
+        width:50% !important;
+    }
+    .arrowContainer{
+        padding-left:7.5em !important;
+    }
+   
+        #form-container {
+    padding-left: 1em !important;
+    width: 53% !important;
+
+    }
+    #form-container input {
+        width:80% !important;
+    }
+
+    #icon{
+        top: 30px!important;
+    }
+    
+    .message{
+        font-size: 1.7em !important;
+    }
+    #ourMessageContainer{
+        margin-top:2%;
+    }
+
+    .aboutIcons{
+        height:95px !important;
+        width:95px !important;
+    }
+    .lower{
+        width:11.5em !important;
+    }
+    .lowerOption{
+        padding-left:15% !important;
+    }
+    .lowerhr{
+        margin-right:15% !important;
+        margin-left:-10%;
+    }
+    .optionName > h3{
+        font-size:2em !important;
+    }
+    #about-us-heading{
+        font-size:3em !important;
+    }
+    .insideAboutPic{
+        width:99px !important;
+    }
+    .aboutFeatures{
+        height:320px;
+    }
+
+    .featuresHeading{
+        margin-bottom:1.5em;
+    }
+    #we{
+        font-size: 1.8em !important;
+    }
+    #home-logo{
+       display: none !important;
+    }
+    #blog-navbar #home-logo{
+        display:inline !important;
+        display: inline !important;
+        position: relative;
+        left: -1%;
+        top: 1%;
+    }
+    #blog-navbar #home-logo > img{
+       display:inline !important;
+       height:50px !important;
+       width:50px !important;
+    }
+    
+    .line:before, .line:after{
+        width:10% !important;
+    }
+     #blog-header h1{
+        font-size: 4em !important;
+    }
+    #blog-navbar{
+     height:100px !important;
+     width:100%;
+     text-align:center;
+     
+    }
+   #share-your-experience-block {
+    padding-top: 1.5%;
+    }
+    .line:before , .line:after{
+        display:none !important;
+    }
+    #blog-image{
+        width:100%;
+        height:290px !important;
+        margin-top:0 !important;
+    }
+    .posts{
+        height:200px !important;
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor:pointer;
+        margin-bottom:1em;
+    }
+    #post-content-top {
+
+    left: -1.2em;
+}
+ 
+    #blog-menu-nav{
+        font-size:1em !important;
+    }
+    #blog-menu-nav-container{
+        position:relative !important;
+        top:20% !important;
+    }
+    #contact-top {
+        background: white;
+    }
+    #formblock legend {
+        color: #ffffff;
+    }
+    #social-media-info-container {
+        color: #ffffff;
+    }
+    #copyright{
+
+    top:75% !important;
+}
+
+}
+
+@media (min-width:1200px) and (max-width:1290px){
+    #nepOnboardImage{
+        margin-left:15% !important;
+    }
+    #saveY{
+        margin-left:-20% !important;
+    }
+    .arrowContainer{
+        padding-left:10.5em !important;
+    } 
+    .line:before , .line:after{
+        display:inline-block !important;
+      
+        width:40% !important;
+    
+    }
+    #share-your-experience-block{
+        padding-top:2%;
+    }
+    #blog-navbar{
+        height:70px!important;
+    }
+    #home-logo {
+        left:-2% !important;
+        top:15% !important;
+    }
+   
+   
+   
+}
+
+.ui-autocomplete{
+    border: 2px groove whitesmoke;
+    height:200px;
+    width:200px;
+    background-color:white;
+    color:black;
+    padding-left:0 !important;
+    overflow: hidden;
+}
+
+.ui-autocomplete> li{
+    list-style: none;
+    font-size: 1em;
+    font-family: Lato !important;
+    padding-left:15%;
+    padding-bottom:0.5em;
+    padding-top:0.5em;
+
+}
+.ui-state-focus{
+    background:none;
+    background-color:#003366 !important;
+    border:none !important;
+    color:white;
+}
+.ui-helper-hidden-accessible{
+    display:none !important;
+}
+.ui-autocomplete> li:hover{
+    cursor:pointer;
+    color:#ffffff;
+    background-color:#003366;
+}
+.optionsUl{
+    padding-left:0;
+}
+
+.optionsBtn{
+    width:70%;
+    padding-left:2%;
+    text-align:left !important;
+    background-image:-webkit-linear-gradient(right, #4B97E4, #A7EDC3);
+    color:white;
+}
+
+.optionsBtnI{
+    margin-right:1em;
+}
+
+.optionsBtnT{
+    font-size:1em;
+}
+
+.theBtns{
+    width:100%;
 }

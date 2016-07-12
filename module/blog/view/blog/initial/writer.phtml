@@ -1,0 +1,70 @@
+<section id="writer-below-section" class="container">
+    <h3 id="writer-heading-for-phone" class="col-xs-12">Write an article </h3>
+    <div class="col-md-9 col-sm-9">
+        <form role="form" method="post"  id="postform" >   
+            <div class="col-md-12 form-group">
+                <fieldset><legend> Blog Title </legend></fieldset>
+                <span>
+                    <input placeholder="maximum character 50" class="form-control nobinput" name="blogPost[title]" id="blogTitle" type="text">               
+                    <input type="hidden" name="blogPost[date]" value="2016-06-7">
+                    <input type="hidden" name="blogPost[fbId]" id="fbidinput">
+                </span>
+            </div>
+              <div class="col-md-12 form-group">
+                <fieldset><legend> Blog Author </legend></fieldset>
+                <span>      
+                    <input class="form-control nobinput" name="blogPost[author]" value="<?php echo $this->writer;?>"/>
+                </span>
+            </div>
+            <div class="col-md-12 form-group">
+                <fieldset><legend> Description </legend></fieldset>
+                <span>
+                    <input placeholder="maximum character 150" class="form-control nobinput" name="blogPost[description]" id="blogDescription" type="text"/>
+                </span>
+
+            </div>
+            <div class="col-md-12 form-group">
+               <fieldset><legend> Post </legend></fieldset>
+
+               <textarea placeholder="Press enter twice before beginning a new paragraph" name="blogPost[content]" id="feedback-textarea" class="thisForPhone form-control nobinput" ></textarea>
+            </div>
+            </form>
+            <form id="fake-form" >
+            <div class="col-md-12 form-group">
+               <fieldset><legend> Upload a picture </legend></fieldset>
+                <div id="the-drop-zone" class="col-md-6 form-control">
+                   <h5 style="width:100%;text-align: center;position:relative;top:25%;">Drag and drop your image here or use add photo button</h5>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="col-md-6">
+                        <button class="theBtns optionsBtn col-md-12 btn " id="add-button"><i class="fa fa-2x fa-plus-circle"></i><span class="post-upload-btns">Add photo</span></button>
+                        <button class="theBtns optionsBtn col-md-12 btn " id="cancel-button"><i class="fa fa-2x  fa-ban"></i><span class="post-upload-btns">cancel</span></button>
+                    </div>
+                    <div id="preview-container" class="col-md-6">
+                    <div id="the-template" class="col-md-12">
+                        <div class="col-md-12">
+                            <div id="uploaded-photo" class="col-md-12">
+                                <img data-dz-thumbnail />
+                            </div>
+                            <div id="uploaded-photo-name" class="col-md-12">
+                                <h5 style="color:black;" data-dz-name></h5>
+                            </div>
+                            <div id="uploaded-photo-size" class="col-md-12">
+                                <p style="color:black;" data-dz-size></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div id="the-message" class="col-md-12">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <button type="submit" id="submitPost" class="btn  btn-default col-md-3">Send</button>
+                <img id="success" class="result"  src="<?php echo $this->basePath() .'/img/success.svg'?>"> 
+                <img id="fail" class="result"  src="<?php echo $this->basePath() .'/img/error.svg'?>"> 
+            </div>                      
+        </form>
+    </div>
+</section>

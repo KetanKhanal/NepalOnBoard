@@ -1,0 +1,21 @@
+<section class="col-md-12 col-sm-12 com-lg-12" id="new-posts"  >
+    <div class="container thePosts"> 
+    <?php foreach($this->posts as $key=>$post) :?>
+        <div class="col-md-5 postContainer" >
+            <div class="posts"  data-post="<?php echo $post->getId() ;?>">
+                <a   class="blogSelection" href="blog/show/<?php echo $post->getId();?>">
+                </a>
+            </div>
+             <div class='col-md-12 postDetailContainer'>
+                        <div class="postCategory"></div>
+                        <div class="postTitle"><span class="postHeading"><?php echo $post->getTitle()." ";?></span></div> 
+                        <div class="postContent"><?php echo substr($post->getContent(),0,162);?><span> <a  href="blog/show/<?php echo $post->getId();?>"><button style="color:black;"class="btn btn-xs btn-info">read more</button></a></span></div>
+             </div>
+        </div>
+        <?php  if(intval($key) % 2 == 0 ) : ?>
+            <div class="col-md-2">
+            </div>  
+        <?php endif;?>
+    <?php endforeach;?>
+    </div>
+</section>

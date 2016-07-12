@@ -16,24 +16,80 @@ return [
     'router' => [
         'routes' => [
             'blog' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'Segment',
                 'options' => [
-                    'route'    => '/blog',
+                    'route'    => '/blog[/:id]',
                     'defaults' => [
-                        'controller' => 'blog\Controller\Initial',
+                        '__NAMESPACE__' => 'blog\Controller',
+                        'controller' => 'Initial',
                         'action'     => 'index',
                     ],
+                    'constraints' => [
+                                'id' => '[0-9]\d*'
+                     ]
                 ],
-            ],
-            
-            
+                'may_terminate' => true,
+                'child_routes' => [
+                    'show' => [
+                        'type'    => 'Segment',
+                        'options' => [
+                            'route'    => '/show[/:id]',
+                            'defaults' => [
+                                'action' => 'show'
+                            ], 
+                            'constraints' => [
+                                'id' => '[0-9]\d*'
+                            ]
+                        ],
+                    ],
+                     'populate' => [
+                        'type'    => 'Segment',
+                        'options' => [
+                            'route'    => '/populate[/:author]',
+                            'defaults' => [
+                                'action' => 'populate'
+                            ], 
+                            'constraints' => [
+                                'author' => '[a-zA-Z][a-zA-Z0-9_-]*'
+                            ]
+                        ],
+                    ],
+                    'writer' => [
+                        'type'    => 'Segment',
+                        'options' => [
+                            'route'    => '/writer[/:author]',
+                            'defaults' => [
+                                'action' => 'writer'
+                            ], 
+                            'constraints' => [
+                                'author' => '[a-zA-Z][a-zA-Z0-9_-]*'
+                            ]
+                        ],
+                    ],
+                    'add' => [
+                        'type'    => 'Segment',
+                        'options' => [
+                            'route'    => '/add[/:author]',
+                            'defaults' => [
+                                'action' => 'add'
+                            ], 
+                            'constraints' => [
+                                'author' => '[a-zA-Z][a-zA-Z0-9_-]*'
+                            ]
+                        ],
+                    ]
+
+                ], 
         ],
-    ],
+    ]
+ ],
+    
     'controllers' => [
         // array below routes the user to factory class which returns an instance of initial controller class
         'factories'=>[
             'blog\Controller\Initial' => 'blog\Factory\InitialControllerFactory'
         ]
+        
     ],
     'view_manager' => [
         'display_not_found_reason' => true,
@@ -42,7 +98,10 @@ return [
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => [
-            'blog/initial/index' => __DIR__ . '/../view/blog/initial/initial.phtml'
+            'blog/initial/index'    => __DIR__ . '/../view/blog/initial/initial.phtml',
+            'blog/initial/show'     => __DIR__ . '/../view/blog/initial/show.phtml',
+            'blog/initial/populate' => __DIR__ . '/../view/blog/initial/populate.phtml',
+            'blog/initial/writer'   => __DIR__ .'/../view/blog/initial/writer.phtml'
         ],
         'template_path_stack' => [
             __DIR__ . '/../view',

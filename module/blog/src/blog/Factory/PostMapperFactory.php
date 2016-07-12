@@ -14,10 +14,9 @@ use blog\Mapper\PostMapper;
 use Zend\Db\Adapter\Adapter;
 class PostMapperFactory implements FactoryInterface {
     
+    /*returns an instance of postmapper class with adapter to the database in it*/
     public function createService(ServiceLocatorInterface $serviceLocator) {
-
         $adapter        = $serviceLocator->get('db2');
-       
         return new PostMapper($adapter);
     } 
 }

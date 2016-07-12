@@ -1,0 +1,23 @@
+    <div id="post-picture-container" class="NepalOnBoardContainer" >
+       <img id="blog-image" style="width:100%;height:auto;margin-top:-8em;"src='<?php echo $this->basePath('./img/posts/post'.$this->post->getId().'.jpg');?>'/>
+    </div>
+    <div id="post-content" class="container" >        
+        <div id="post-content-top" >
+            <div class="col-md-3" id="post-author">
+                 <span>by</span><span style="margin-left:15px"><?php echo $this->post->getAuthor();?></span>
+            </div>
+            <div  class="col-md-12" id="post-title-container">
+                <div id="post-title" class="col-md-10">
+                    <span><h2><?php echo $this->post->getTitle()?></h2> </span>
+                </div>
+                <div class="fb-like col-md-1" data-href="http://nepalonboard.com/blog/show/<?php echo $this->post->getId();?>" id="like-button" data-layout="button" > </div>
+                <div id="share-button" data-id="<?php echo $this->post->getId();?>" data-colorscheme="dark" data-layout="button" class="col-md-1 fb-share-button">
+                </div>
+            </div>
+        </div>
+       <section id="post-text-content"><p style="margin-top:1.5em"><?php echo $this->post->getContent();?></p></section>
+       <div id="leave-comment-heading"><h3>Be a part of nepal onboard</h3></div>
+       <div style="font-family: lato !important;top:-1em;padding-top:1em;" class="fb-comments" data-width="100%" data-href="http://nepalonboard.com/blog/show/<?php echo $this->post->getId();?>" data-numposts="5">
+           
+       </div>
+    </div>

@@ -19,8 +19,8 @@ class PostService implements PostServiceInterface {
         $this->postMapper = $postMapper;
     }
     
-    public function findAllPosts() {
-       $posts = $this->postMapper->findAll();
+    public function findAllPosts($order = 0) {
+       $posts = $this->postMapper->findAll($order);
        return $posts;
     }
     
@@ -28,7 +28,12 @@ class PostService implements PostServiceInterface {
        $post = $this->postMapper->findById($id);
        return $post;
     }
-    
+    public function findPostByAuthor($name){
+        $post = $this->postMapper->findByAuthor($name);
+        return $post;
+    }
     public function deletePost(){}
-    public function savePost(){}
+    public function save($post){
+       return $this->postMapper->save($post);
+    }
 }

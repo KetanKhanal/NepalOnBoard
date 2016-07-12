@@ -17,12 +17,16 @@ namespace blog\Factory;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use blog\Controller\InitialController;
+use Zend\Session\Validator\HttpUserAgent;
+use Zend\Session\Validator\RemoteAddr;
 class InitialControllerFactory implements FactoryInterface {
     
+    /*Returns an instance of classs initial controller with postservice type class initialised in it*/
     public function createService(ServiceLocatorInterface $serviceLocator) {
         $realServiceLocator = $serviceLocator->getServiceLocator();
         $postService        = $realServiceLocator->get('blog\Service\PostServiceInterface');
-        
-        return new InitialController($postService);
+        $HttpUserAgent = new HttpUserAgent();
+        $HttpRemote    = new RemoteAddr();
+        return new InitialController($postService,$HttpUserAgent,$HttpRemote);
     } 
 }

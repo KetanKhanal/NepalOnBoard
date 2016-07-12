@@ -17,6 +17,8 @@ use Zend\View\Model\JsonModel as jsonmodel;
 use Zend\Validator\EmailAddress as emailvalidator;
 use Zend\Validator\NotEmpty;
 use Zend\Db\TableGateway\TableGateway as tablegateway;
+use Application\utilities\mailGenerator as mail;
+use DateTime;
 class InitialController extends AbstractActionController
 {  
     protected $feedbackTable;
@@ -29,7 +31,9 @@ class InitialController extends AbstractActionController
         $view     = new ViewModel();
         $this->layout()->setTemplate('layout/baseInterface');
         $currentUrl=$this->getRequest()->getUriString();
-        $view->setVariables(['currentUrl'=>$currentUrl]);
+        $dateTime = new DateTime();
+        $dateTime->setDate('2016','06','23');
+        $view->setVariables(['currentUrl'=>$currentUrl,'currentDate'=>$dateTime->format('Y')]);
         return $view;
         
     }
@@ -39,11 +43,12 @@ class InitialController extends AbstractActionController
        $email           = $this->getRequest()->getPost();
        $emailValidator  = new emailvalidator();
        $emptyValidator  = new NotEmpty();
+
        $subData         = $this->getTable('subscription')->select();
        $continue        = true; 
        $action          = '';
        $fieldToUpdateId = '';
-
+       
        $isGiven = $emptyValidator->isValid($email->email);
        if( !$emailValidator->isValid($email->email)  ){
         $view->setVariables(['result'=>false,'message'=>$emailValidator->getMessages()]);  
@@ -70,6 +75,9 @@ class InitialController extends AbstractActionController
           $this->getTable('subscription')->insert((array)$email);
           $view->setVariables(['result'=>true,'message'=>"Yes the job is done"]);
       }
+       if($view->getVariable('result')){
+           mail::GENERATEEMAIL($email);
+       };
        return $view;
     }
     
@@ -129,6 +137,7 @@ class InitialController extends AbstractActionController
             }
             $view->setVariables(["result"=>true,'message'=>'Your message has been posted']);
        }
+       
        return $view;
     }
     public function editAction(){   
