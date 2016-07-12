@@ -16,7 +16,7 @@ return [
     'router' => [
         'routes' => [
             'house' => [
-                'type' => 'literal',
+                'type' => 'Literal',
                 'options' => [
                     'route'    => '/house',
                     'defaults' => [
