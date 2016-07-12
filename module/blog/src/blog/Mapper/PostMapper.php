@@ -123,6 +123,7 @@ class PostMapper implements DataMapperInterface {
             //delete the files 
             return[false,'Server Error'];    
         }
+        
         return [true,'success'];// if everything goes according to the plan then return success
     }
     public function delete(){
