@@ -237,7 +237,7 @@ initial = {
             slidesNavigation: true,
             slidesNavPosition: 'bottom',
             css3: true,
-            scrollingSpeed: 500,
+            scrollingSpeed: 100,
             autoScrolling: true,
             fitToSection: true,
             fitToSectionDelay: 50,
