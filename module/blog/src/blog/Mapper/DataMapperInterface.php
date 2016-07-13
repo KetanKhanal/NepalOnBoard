@@ -14,7 +14,7 @@ namespace blog\Mapper;
 
 interface DataMapperInterface {
     
-    public function findAll($order);
+    public function findAll($order,$pending);
     public function findById($id);
     public function findByAuthor($name);
     public function save($item);

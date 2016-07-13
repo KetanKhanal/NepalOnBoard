@@ -22,6 +22,7 @@ class Post implements NobModelInterface,  NobModel {
     const APPROVED       = 'approved';
     const MESSAGE = 1;
     const RESULT =0;
+    const DEFAULT_ORDER = 1;
     protected $id ,$title, $author, $date,$post,$image,$content,$description,$fbId,$status;
     public function __construct($options=[]) {
         if(!$options['id'] == null){

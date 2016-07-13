@@ -39,12 +39,15 @@ class PostMapper implements DataMapperInterface {
          return $this->postTable;
     }
     /*Returns all the posts in post table that have status approved.*/
-    public function findAll($order) {
+    public function findAll($order,$pending=false) {
       $posts = [];
-      $thePosts = ($order != 0 && $order == 1)?$this->theTable()->select(function(Select $select){$select->order('id DESC');$select->where->like('status',  Post::APPROVED);}):$this->theTable()->select();
-      if($order != 0 && $order==2){
-          $thePosts = $this->theTable()->select(function(Select $select){$select->order('title ASC');$select->where->like('status',Post::APPROVED);});
+      $thePosts = ($order != 0 && $order == 1 && ! $pending)?$this->theTable()->select(function(Select $select){$select->order('id DESC');$select->where->like('status',  Post::APPROVED);}):$this->theTable()->select();
+      $bystatus = (!$pending)?Post::APPROVED:Post::PENDING;
+      if($order != 0 && $order==2 ){
+          $thePosts = $this->theTable()->select(function(Select $select){$select->order('title ASC');$select->where->like('status',$bystatus);});
       }
+      
+      
       foreach($thePosts as $data){
           $posts[] = $this->findById($data->id);
       }

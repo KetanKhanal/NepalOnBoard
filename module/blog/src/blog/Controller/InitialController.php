@@ -83,9 +83,10 @@ class InitialController extends AbstractActionController{
         $remover   = new replacer(['pattern'=>'/-/','replacement'=>' ']);
         $name      = $filter->filter($this->getRequest()->getUriString());
         $finalName = $remover->filter($name);
-        $posts = $this->postService->findPostByAuthor($finalName);
+        $posts = $this->postService->findAllPosts(Post::DEFAULT_ORDER,true);
         $this->layout()->setVariables(['writer'=>$finalName,'show'=>true]);
-        $view->setVariables(['posts'=>$posts,'writer'=>$finalName]);
+        $changer = ($finalName === 'Ketan Khanal')?true:false;
+        $view->setVariables(['posts'=>$posts,'writer'=>$finalName,'changer'=>$changer]);
         return $view;
     }
     
