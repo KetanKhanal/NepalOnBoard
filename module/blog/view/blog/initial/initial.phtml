@@ -20,7 +20,7 @@
 <section class="col-md-12 col-sm-12 com-lg-12" id="new-posts" data-authors='<?php echo json_encode($this->authors);?>' >
     <div class="container thePosts"> 
     <?php foreach($this->posts as $key=>$post) :?>
-        <?php if($post->getStatus()===$this->approved):?>
+
             <div class="col-md-5 postContainer" >
                 <div class="posts"  data-post="<?php echo $post->getId() ;?>">
                     <a   class="blogSelection" href="blog/show/<?php echo $post->getId();?>">
@@ -37,7 +37,7 @@
                 </div>  
         <?php endif;?>
         
-        <?php endif;?>
+        
         
     <?php endforeach;?>
     </div>

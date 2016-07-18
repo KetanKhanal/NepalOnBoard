@@ -396,6 +396,8 @@ featuresHeading{
 }
 #author-search-button{
     background-image:-webkit-linear-gradient(right, #4B97E4, #A7EDC3);
+    background-image:-moz-linear-gradient(right, #4B97E4, #A7EDC3);
+    background-image:-ms-linear-gradient(right, #4B97E4, #A7EDC3);
 }
 @media (max-width:750px){
     html,body{
@@ -1261,6 +1263,8 @@ top:37%;left:37%;
     font-family: ptbold ;
     width:100%;
     background-image:-webkit-linear-gradient(right, #4B97E4, #A7EDC3);
+    background-image:-ms-linear-gradient(right, #4B97E4, #A7EDC3);
+    background-image:-moz-linear-gradient(right, #4B97E4, #A7EDC3);
 }
 .sort:hover{
     color:#ffffff;
