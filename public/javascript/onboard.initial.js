@@ -108,7 +108,6 @@ initial = {
               $('#hacha').removeClass('fa-3x').addClass('fa-5x');
           }
           if(isPhone){
-              $("#our-slider").removeClass('carousel slider').removeAttr('data-ride');
               $('#hacha').removeClass('fa-3x').addClass('fa-4x');
               $('#messageForm').css('padding-left','0');
               $('#messageOnSubmission').css({"font-size":"1em"});

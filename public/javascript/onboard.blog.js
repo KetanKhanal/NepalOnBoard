@@ -198,7 +198,7 @@ initial = {
         });
         $(document).on('click','.sort',function(){
            var value = $(this).val();
-            $('.thePosts').load('/blog/'+value+' .thePosts > *',function(){
+            $('#new-posts').load('/blog/'+value+' #new-posts > *',function(){
                 me.bringPhoto();              
             }); 
         });
