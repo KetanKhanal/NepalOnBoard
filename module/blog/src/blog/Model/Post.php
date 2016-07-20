@@ -17,11 +17,13 @@ use blog\Model\NobModelInterface;
 use blog\Model\NobModel;
 
 class Post implements NobModelInterface,  NobModel {
-    const DEFAULT_STATUS = 'pending';
+    
     const PENDING        = 'pending';
+    const DEFAULT_STATUS = self::PENDING;
     const APPROVED       = 'approved';
     const MESSAGE = 1;
     const RESULT =0;
+    const DEFAULT_ORDER = 2;
     protected $id ,$title, $author, $date,$post,$image,$content,$description,$fbId,$status;
     public function __construct($options=[]) {
         if(!$options['id'] == null){
@@ -72,4 +74,5 @@ class Post implements NobModelInterface,  NobModel {
     public function setStatus($status){
        $this->status = $status;
     }
+
 }

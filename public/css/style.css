@@ -312,7 +312,6 @@ featuresHeading{
     left:0px;
     height:100%;
     width:100%;
-    z-index: -2;
     
 }
 #our-slider,.carousel-inner{
@@ -396,6 +395,8 @@ featuresHeading{
 }
 #author-search-button{
     background-image:-webkit-linear-gradient(right, #4B97E4, #A7EDC3);
+    background-image:-moz-linear-gradient(right, #4B97E4, #A7EDC3);
+    background-image:-ms-linear-gradient(right, #4B97E4, #A7EDC3);
 }
 @media (max-width:750px){
     html,body{
@@ -1261,6 +1262,8 @@ top:37%;left:37%;
     font-family: ptbold ;
     width:100%;
     background-image:-webkit-linear-gradient(right, #4B97E4, #A7EDC3);
+    background-image:-ms-linear-gradient(right, #4B97E4, #A7EDC3);
+    background-image:-moz-linear-gradient(right, #4B97E4, #A7EDC3);
 }
 .sort:hover{
     color:#ffffff;
@@ -1276,6 +1279,10 @@ top:37%;left:37%;
     margin:0px;
     padding-top:2%;
     background-color:#ffffff;
+    height:100%;
+}
+
+#new-posts{
     height:100%;
 }
 .bodyClass{
@@ -1958,3 +1965,16 @@ top:37%;left:37%;
 .theBtns{
     width:100%;
 }
+
+.carousel-control.left , .carousel-control.right{
+    background-image:none !important;
+}
+.carousel-control{
+    height:10% !important;
+    width:8% !important;
+    top:8em !important;
+    opacity:0.8 !important;
+    color:black !important;
+    padding-top:1.2% !important;
+}
+

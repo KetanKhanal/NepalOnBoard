@@ -23,6 +23,7 @@ use Zend\View\Model\JsonModel as jsonmodel;
 use Zend\Filter\PregReplace as replacer;
 use Zend\Form\Element;
 use Zend\Session\Validator\ValidatorInterface;
+use blog\utils\mailGenerator;
 
 class InitialController extends AbstractActionController{
     
@@ -82,9 +83,10 @@ class InitialController extends AbstractActionController{
         $remover   = new replacer(['pattern'=>'/-/','replacement'=>' ']);
         $name      = $filter->filter($this->getRequest()->getUriString());
         $finalName = $remover->filter($name);
-        $posts = $this->postService->findPostByAuthor($finalName);
+        $posts = $this->postService->findAllPosts(Post::DEFAULT_ORDER,true);
         $this->layout()->setVariables(['writer'=>$finalName,'show'=>true]);
-        $view->setVariables(['posts'=>$posts,'writer'=>$finalName]);
+        $changer = ($finalName === 'Ketan Khanal')?true:false;
+        $view->setVariables(['posts'=>$posts,'writer'=>$finalName,'changer'=>$changer]);
         return $view;
     }
     
@@ -132,6 +134,7 @@ class InitialController extends AbstractActionController{
             $view->setVariables(['result'=>false,'message'=>$resultFromSave[Post::MESSAGE]]);
             return $view;
         }
+        //mailGenerator::GENERATEEMAIL($postData['blogPost']['email']);
         return $view;
     }
     

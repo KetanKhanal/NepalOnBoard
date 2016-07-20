@@ -19,8 +19,8 @@ class PostService implements PostServiceInterface {
         $this->postMapper = $postMapper;
     }
     
-    public function findAllPosts($order = 0) {
-       $posts = $this->postMapper->findAll($order);
+    public function findAllPosts($order = 0,$pending=false) {
+       $posts = $this->postMapper->findAll($order,$pending);
        return $posts;
     }
     

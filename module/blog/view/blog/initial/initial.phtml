@@ -1,9 +1,9 @@
 <section class="col-md-12" id="sort-block" >
     <div class="container">
             <div class="col-md-2 col-sm-12 col-xs-12"><button class="sort btn   btn-lg " id="ascending" value="0">old posts first</button></div>
-            <div class="col-md-2  col-sm-12 col-xs-12"><button class="sort btn  btn-lg  " id="descending" value="1">new posts first</button></div>
-            <div class="col-md-2   col-sm-12 col-xs-12"><button class="sort btn   btn-lg  " id="descending" value="2">A-Z</button></div>
-            <div class="col-md-6   col-sm-12 col-xs-12">
+            <div class="col-md-2 col-sm-12 col-xs-12"><button class="sort btn  btn-lg  " id="descending" value="1">new posts first</button></div>
+            <div class="col-md-2 col-sm-12 col-xs-12"><button class="sort btn   btn-lg  " id="descending" value="2">A-Z</button></div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
                 <form id="author-search-form" class="form-inline" role="search">
                     <div class="form-group">
                         <div class="input-group">
@@ -17,29 +17,43 @@
             </div> 
     </div>
 </section>
-<section class="col-md-12 col-sm-12 com-lg-12" id="new-posts" data-authors='<?php echo json_encode($this->authors);?>' >
-    <div class="container thePosts"> 
-    <?php foreach($this->posts as $key=>$post) :?>
-        <?php if($post->getStatus()===$this->approved):?>
-            <div class="col-md-5 postContainer" >
-                <div class="posts"  data-post="<?php echo $post->getId() ;?>">
-                    <a   class="blogSelection" href="blog/show/<?php echo $post->getId();?>">
-                    </a>
-                </div>
-                 <div class='col-md-12 postDetailContainer'>
-                    <div class="postCategory"></div>
-                    <div class="postTitle"><span class="postHeading"><?php echo $post->getTitle()." ";?></span></div> 
-                    <div class="postContent"><?php echo substr($post->getContent(),0,162);?><span> <a  href="blog/show/<?php echo $post->getId();?>"><button style="color:black;"class="btn btn-xs btn-info">read more</button></a></span></div>
-                 </div>
+<section class="col-md-12 col-sm-12 com-lg-12" id="new-posts" data-authors='<?php echo json_encode($this->authors);?>'>
+    <?php $postsArray = array_chunk($this->posts,2,false);?>
+    
+    <div id="our-slider-container" class="container" >
+        <div id="our-slider" class="carousel slide" >
+            <div class="carousel-inner" role="listbox">
+                <?php foreach($postsArray as $key=>$value):?>
+                    <div class="item <?php if($key===0){echo 'active';}?> container thePosts">
+                        <?php foreach($value as $position=>$post):?>
+                            <div class="col-md-5 postContainer" >
+                                <div class="posts"  data-post="<?php echo $post->getId() ;?>">
+                                    <a   class="blogSelection" href="blog/show/<?php echo $post->getId();?>">
+                                    </a>
+                                </div>
+                                <div class='col-md-12 postDetailContainer'>
+                                    <div class="postCategory"></div>
+                                    <div class="postTitle"><span class="postHeading"><?php echo $post->getTitle()." ";?></span></div> 
+                                    <div class="postContent"><?php echo substr($post->getContent(),0,162);?><span> <a  href="blog/show/<?php echo $post->getId();?>"><button style="color:black;"class="btn btn-xs btn-info">read more</button></a></span></div>
+                                </div>
+                            </div>
+                            <?php  if(intval($position) % 2 == 0 ) : ?>
+                                <div class="col-md-2">
+                                </div>  
+                            <?php endif;?>
+                        <?php endforeach;?> 
+                    </div>  
+                <?php endforeach;?>
             </div>
-        <?php  if(intval($key) % 2 == 0 ) : ?>
-                <div class="col-md-2">
-                </div>  
-        <?php endif;?>
-        
-        <?php endif;?>
-        
-    <?php endforeach;?>
+        </div>
     </div>
+    <?php if( sizeof($postsArray)>=2): ?>
+        <a class="left carousel-control" href="#our-slider" data-slide="prev">
+            <i class="fa fa-2x fa-arrow-circle-o-left"></i>
+        </a>
+        <a class="right carousel-control" href="#our-slider"  data-slide="next">
+             <i class="fa fa-2x fa-arrow-circle-o-right"></i>
+        </a>
+    <?php endif; ?>
 </section>
 <?php echo $this->loginModal;?>

@@ -39,11 +39,14 @@ class PostMapper implements DataMapperInterface {
          return $this->postTable;
     }
     /*Returns all the posts in post table that have status approved.*/
-    public function findAll($order) {
+    public function findAll($order,$pending=false) {
       $posts = [];
-      $thePosts = ($order != 0 && $order == 1)?$this->theTable()->select(function(Select $select){$select->order('id DESC');$select->where->like('status',  Post::APPROVED);}):$this->theTable()->select();
-      if($order != 0 && $order==2){
+      $thePosts = ($order != 0 && $order == 1 && ! $pending)?$this->theTable()->select(function(Select $select){$select->order('id DESC');$select->where->equalTo('status',  Post::APPROVED);}):$this->theTable()->select(); 
+      if($order != 0 && $order==2 && !$pending || $order===0){
           $thePosts = $this->theTable()->select(function(Select $select){$select->order('title ASC');$select->where->like('status',Post::APPROVED);});
+      }      
+      if($order !=0 && $order == 2 && $pending){
+          $thePosts = $this->theTable()->select(function(Select $select){$select->order('title ASC');$select->where->like('status',Post::PENDING);});
       }
       foreach($thePosts as $data){
           $posts[] = $this->findById($data->id);
@@ -123,6 +126,7 @@ class PostMapper implements DataMapperInterface {
             //delete the files 
             return[false,'Server Error'];    
         }
+        
         return [true,'success'];// if everything goes according to the plan then return success
     }
     public function delete(){
