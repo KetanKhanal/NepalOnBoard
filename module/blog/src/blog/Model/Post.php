@@ -17,8 +17,9 @@ use blog\Model\NobModelInterface;
 use blog\Model\NobModel;
 
 class Post implements NobModelInterface,  NobModel {
-    const DEFAULT_STATUS = 'pending';
+    
     const PENDING        = 'pending';
+    const DEFAULT_STATUS = self::PENDING;
     const APPROVED       = 'approved';
     const MESSAGE = 1;
     const RESULT =0;
