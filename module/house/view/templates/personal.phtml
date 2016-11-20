@@ -1,0 +1,30 @@
+  <script type = "text/ng-template" id = "personal.htm">
+         <div class=" col-md-3 col-xs-12 form-group">
+            <span>
+                <input ng-change="checkChange()" class="form-control inputLevel1" placeholder="First Name" name="host[Available]" ng-model="sayings.firstName"  id="nameField" type="text" >
+            </span>
+           
+        </div>
+        <div class="col-md-3 col-xs-12 form-group">
+            
+            <span>
+                <input  ng-change="checkChange()" class="form-control inputLevel1" placeholder="Last Name" name="host[Type]" ng-model="sayings.lastName" id="" type="text"/>
+             </span>
+            
+        </div>
+        <div class="col-md-3 col-xs-12 form-group">
+           
+            <span>
+                <input ng-change="checkChange()" class="form-control inputLevel1" placeholder="E-mail" name="host[People]" ng-model="sayings.email" id="" type="email"/>
+             </span>
+           
+
+        </div>
+        <div class="col-md-3 col-xs-12 form-group">
+            
+            <span>
+                <input ng-change="checkChange()" class="form-control inputLevel1" placeholder="Date Of Birth" name="host[Mattress]" ng-model="sayings.dob" id="dob" type="text"/>
+                <i class="calendarIcon fa fa-2x fa-calendar"> </i>
+            </span>
+        </div>
+    </script>

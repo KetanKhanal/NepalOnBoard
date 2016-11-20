@@ -73,6 +73,7 @@
             </div>                      
         </form>
     </div>
+    <?php if($this->changer):?>
     <div class="col-md-3"> 
         <?php foreach($this->posts as $key=>$post) :?>
             <div class="col-md-5 postContainer" >
@@ -92,4 +93,5 @@
         <?php endif;?>
     <?php endforeach;?>
     </div>
+    <?php endif;?>
 </section>

@@ -1,0 +1,22 @@
+  <script type = "text/ng-template" id = "verification.htm">
+      <div ng-controller="verificationController">
+         <div class=" col-md-4 col-xs-12 form-group">
+            <span>
+                <input ng-change="checkChange()" class="form-control inputLevel1 " placeholder="Mobile Number" name="host[Available]" ng-model="sayings.mob" id="nameField" type="text" >
+  
+            </span>
+           
+        </div>
+        <div class=" col-md-4 col-xs-12 form-group">
+            <span>
+                <input ng-change="checkChange()" class="form-control inputLevel1 " placeholder="Australian Drivers Licence Number" ng-model="sayings.lisence" name="host[Type]" id="" type="text"/>
+             </span>
+        </div>
+        <div class="col-md-4 col-xs-12 form-group">
+            <span>
+                <input type="hidden" ng-model="sayings.veri" ng-veri="true"/>
+                <input ng-change="checkChange()" class="form-control inputLevel1" ng-model="sayings.passport" name="host[People]" id="" type="text"/>
+             </span>
+        </div>
+</div>
+    </script>

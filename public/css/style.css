@@ -1912,7 +1912,7 @@ top:37%;left:37%;
 .ui-autocomplete{
     border: 2px groove whitesmoke;
     height:200px;
-    width:200px;
+    width:210px;
     background-color:white;
     color:black;
     padding-left:0 !important;
@@ -1930,7 +1930,7 @@ top:37%;left:37%;
 }
 .ui-state-focus{
     background:none;
-    background-color:#003366 !important;
+    background-color:#003366;
     border:none !important;
     color:white;
 }

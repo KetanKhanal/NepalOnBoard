@@ -1,0 +1,27 @@
+
+ <script type = "text/ng-template"    id = "expenses.htm">
+     <div ng-controller="expenseController">
+       <div class=" col-md-3 col-xs-12 form-group">
+            <span>
+                <input  placeholder="Rent per week" name="host[rent]" id="rent" ng-model="sayings.rent" ng-change="checkChange()" class="form-control inputLevel1" type="number" >
+            </span>
+               
+        </div>
+        <div class="col-md-6 col-xs-12 form-group" >
+            <div ng-repeat="chck in checkBoxes"  class="exp col-md-3">
+                <span>{{chck.label}}</span>
+                <span class="extraCheckContainer"><input ng-model="chck.val" class=" extraCheck" type="checkbox"></span>
+                <div class="extraInputContainer col-md-12">
+                   <div class="extraInput">                 
+                        <input id="{{chck.label}}" class="expen" ng-show="chck.val" ng-model="sayings.expenses[chck.label]" style="width:inherit; " type="number" name="host[{{chck.label}}]">
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div  class="col-md-3 col-xs-12 form-group">     
+            <span>
+                <input  placeholder="Total" class="form-control inputLevel1" disabled name="host[People]" ng-value="total()" ng-change="checkChange()" ng-model="sayings.Total" id="" type="text"/>
+            </span>
+        </div>
+</div>
+    </script>

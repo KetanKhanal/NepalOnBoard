@@ -13,6 +13,13 @@ return [
              \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
          ],  
     ],
+      'controllers' => [
+        // array below routes the user to factory class which returns an instance of initial controller class
+        'factories'=>[
+            'blog\Controller\Initial' => 'blog\factory\InitialControllerFactory'
+        ]
+        
+    ],
     'router' => [
         'routes' => [
             'blog' => [
@@ -84,13 +91,7 @@ return [
     ]
  ],
     
-    'controllers' => [
-        // array below routes the user to factory class which returns an instance of initial controller class
-        'factories'=>[
-            'blog\Controller\Initial' => 'blog\Factory\InitialControllerFactory'
-        ]
-        
-    ],
+  
     'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
@@ -98,6 +99,7 @@ return [
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => [
+            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
             'blog/initial/index'    => __DIR__ . '/../view/blog/initial/initial.phtml',
             'blog/initial/show'     => __DIR__ . '/../view/blog/initial/show.phtml',
             'blog/initial/populate' => __DIR__ . '/../view/blog/initial/populate.phtml',

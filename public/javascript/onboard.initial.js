@@ -185,7 +185,8 @@ initial = {
            $(this).css({
                cursor:'pointer',
                opacity:0.7,
-               border:'none'
+               outline:2,
+               'border-color':'rgba(0,196,255,0.7)'
            }); 
         });
         $(document).on('mouseout','.menu',function(){
@@ -236,12 +237,12 @@ initial = {
             slidesNavigation: true,
             slidesNavPosition: 'bottom',
             css3: true,
-            scrollingSpeed: 100,
+            scrollingSpeed: 700,
             autoScrolling: true,
             fitToSection: true,
-            fitToSectionDelay: 50,
+            fitToSectionDelay: 1000,
             scrollBar: false,
-            easing: 'easeInOutCubic',
+            easing: 'linear',
             easingcss3: 'ease',
             loopBottom: false,
             loopTop: false,

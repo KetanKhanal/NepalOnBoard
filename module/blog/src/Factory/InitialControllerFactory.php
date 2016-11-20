@@ -23,6 +23,8 @@ class InitialControllerFactory implements FactoryInterface {
     
     /*Returns an instance of classs initial controller with postservice type class initialised in it*/
     public function createService(ServiceLocatorInterface $serviceLocator) {
+        var_dump('suk');
+        die();
         $realServiceLocator = $serviceLocator->getServiceLocator();
         $postService        = $realServiceLocator->get('blog\Service\PostServiceInterface');
         $HttpUserAgent = new HttpUserAgent();

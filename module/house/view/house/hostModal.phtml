@@ -1,0 +1,66 @@
+<div ng-app="formApp" data-modal="host" class="modal fade houseModal" id="host-modal" >
+    <div class="modal-dialog" ng-controller="submitController as sb" >
+            <form  role="form"  method="POST"  ng-submit="submitHost()" id="form" class="incomplete" >	
+<!--                <input id="progressTracker" type="hidden" ng-model="determinate.val">-->
+                    <div class="modal-content">
+                        <div class="modal-header"  >
+                            <md-progress-linear id="progressBar" md-mode="determinate" value="{{sb.value}}"></md-progress-linear>
+                           <h2  id="modal-title" ></h2>
+                           <i class="over modalShut fa fa-2x fa-close" style="position:relative;top:-0.8em;clear:left;float:right">
+     
+                           </i>
+                        </div>
+                        <div  class=" modal-body">  
+                            <div style="position:relative" class='ng-view' id="app-view">
+
+                            </div>
+                            
+                        </div>
+                      
+                        <div  class="modal-footer">  
+                            <a id="next-set"  data-way="next"  ng-click="calPro()" class="over change"><i style="float:right;" id="next" class="fa fa-4x fa-arrow-right"></i></a>
+                            <a class="over change" data-way="previous" ng-click="calPro()" id="previous-set"><i style="float:left;" id="previous" class="fa fa-4x fa-arrow-left"></i></a> 
+                            <div style="display:none" id="host-submit-button" >
+                                <button type="submit" >submit</button>
+                            </div>
+                            </div>
+                    </div>
+            </form>
+    </div>
+    <div class="container">
+        <div id="info-block" class="col-md-3">
+           
+        </div>
+    </div>
+   <?php 
+        foreach($this->temps as $temp){
+            echo $this->$temp;
+        } 
+    ?>
+</div>
+
+<div class="set container active-set" id="address">
+
+</div>
+<div class="set container" id="information">
+
+</div>                                 
+</div>
+<div class="set" id="expenses">
+    ` 
+</div>
+<div class="set" id="pictures">
+    `
+</div>
+<div class="set" id="detail">
+    `
+</div>
+<div class="set" id="personal">
+    `
+</div>
+<div class="set" id="verification">
+    `
+</div>
+<div class="set" id="final">
+    `
+</div>

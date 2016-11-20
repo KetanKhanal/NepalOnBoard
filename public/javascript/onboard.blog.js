@@ -1,4 +1,7 @@
-$(document).ready(function(){initial.start();});
+$(document).ready(function(){
+    
+    initial.start();
+});
 initial = {
     stop: true,
     clicked:'',

@@ -7,135 +7,92 @@
  * @author Ketan
  */
 
-namespace blog\Controller ;
+namespace house\Controller ;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use blog\Service\PostServiceInterface;
-use Zend\Filter\Digits as getDigits;
-use Zend\Filter\ToInt as number;
-use Zend\Filter\BaseName ;
-use Zend\View\Helper\HtmlList as htmlList;
-use Zend\Validator\StringLength;
-use blog\form\postUploadFrom as form;
-use blog\Model\Post;
-use Zend\Validator\NotEmpty;
-use Zend\View\Model\JsonModel as jsonmodel;
-use Zend\Filter\PregReplace as replacer;
-use Zend\Form\Element;
-use Zend\Session\Validator\ValidatorInterface;
-use blog\utils\mailGenerator;
-
-class InitialController extends AbstractActionController{
-    
-    protected $postService;
-    protected $posts;
-    protected $agent;
-    protected $remote;
-    public function __construct(PostServiceInterface $postService, ValidatorInterface $httpagent,ValidatorInterface $httpRemote) {
-        $this->postService = $postService;
-        $this->agent = $httpagent;
-        $this->remote = $httpRemote;
+use Zend\View\Model\JsonModel;
+use house\util\loadCities;
+use house\service\houseService;
+use house\model\user;
+use house\logic\logic;
+use house\logic\addJob;
+use house\logic\deleteJob;
+use house\logic\updateJob;
+class houseController extends AbstractActionController{
+    const COUNTRY = 'country';
+    const TEMPLATES = [
+      "address","information","expenses","pictures","detail","personal","verification","final" 
+    ];
+    private $logic;
+    public function __construct(logic $logic) {
+        $this->logic = $logic;
     }
-    
     public function indexAction() {
-        $view = new ViewModel();
-        $order = 0;
-        $getDigit = new getDigits();
-        $check    = (int)$getDigit->filter($this->getRequest()->getUri()->getPath());
-        if($this->getRequest()->isGet() && $check !=0 ){
-            $this->posts = $this->postService->findAllPosts($check);
-        }else {
-            $this->posts = $this->postService->findAllPosts(); 
-        }
-        $authors = [];
-        foreach($this->posts as $p){
-            $authors[] = $p->getAuthor();
-        }
-        $modal = new ViewModel();
-        $modal->setTemplate('blog/initial/LoginModal');
-        $this->layout()->addChild($modal,'loginModal');
-        $view->setVariables(['posts'=>$this->posts,'authors'=> array_unique($authors),'pending'=>  Post::PENDING,'approved'=>Post::APPROVED]);
+        $view  = new ViewModel();
+        $this->layout()->setTemplate('layout/houselayout');
+        $temp1 = new ViewModel();
+        $temp1->setTemplate('/templates/address');
+        $temp2 = new ViewModel();
+        $temp2->setTemplate('/templates/information');
+        $temp3 = new ViewModel();
+        $temp3->setTemplate('/templates/expenses');
+        $temp4 = new ViewModel();
+        $temp4->setTemplate('/templates/pictures');
+        $temp6 = new ViewModel();
+        $temp6->setTemplate('/templates/personal');     
+        $temp5 = new ViewModel();
+        $temp5->setTemplate('/templates/detail');
+        $temp7 = new ViewModel();
+        $temp7->setTemplate('/templates/verification');  
+        $temp8 = new ViewModel();
+        $temp8->setTemplate('/templates/final');
+        $modal1 = new ViewModel();
+        $modal1->setTemplate('house/hostModal');
+        $modal2 = new ViewModel();
+        $modal2->setTemplate('house/LoginModal');
+        $modal1->setVariables(['temps'=>self::TEMPLATES]);
+        $modal1->addChild($temp1,'address');
+        $modal1->addChild($temp2,'information');
+        $modal1->addChild($temp3,'expenses');
+        $modal1->addChild($temp4,'pictures');
+        $modal1->addChild($temp5,'detail'); 
+        $modal1->addChild($temp6,'personal');
+        $modal1->addChild($temp7,'verification');
+        $modal1->addChild($temp8,'final');
+        $view->addChild($modal1,'hostModal');  
+        $view->addChild($modal2,'signModal');
         return $view;
     }
-    
-    public function showAction(){
-        $view       = new ViewModel();
-        $getDigit   = new getDigits();
-        $id         = $getDigit->filter( $this->getRequest()->getUri()->getPath());
-        $post       = $this->postService->findPostById((int)$id);
-        $view->setVariables(['post'=>$post]); 
-        $this->layout()->setVariables(['show'=>true,'title'=>$post->getTitle(),'id'=>$post->getId(),'description'=>$post->getDes(),'author'=>$post->getAuthor(),'fbId'=>(int)$post->getfbId()]);
+    /*The function below returns a list of cities for the country that is received as get query
+     */
+    public function loadAction(){
+        $view    = new JsonModel();
+        $country = $this->getRequest()->getQuery(self::COUNTRY);
+        $cities  = new loadCities($country);
+        $view->setVariables($cities->getCities());
         return $view;
     }
-    
-    public function populateAction(){
-        $view   = new ViewModel();
-//      $filter = new BaseName();
-//      $name = $filter->filter($this->getRequest()->getUriString());
-        $name   = $this->getRequest()->getQuery()->name;
-        $posts  = $this->postService->findPostByAuthor($name);  
-        $view->setVariables(['posts'=>$posts]);
-        return $view;
-    }
-    public function writerAction(){
-        $view      = new ViewModel();
-        $filter    = new BaseName();
-        $remover   = new replacer(['pattern'=>'/-/','replacement'=>' ']);
-        $name      = $filter->filter($this->getRequest()->getUriString());
-        $finalName = $remover->filter($name);
-        $posts = $this->postService->findAllPosts(Post::DEFAULT_ORDER,true);
-        $this->layout()->setVariables(['writer'=>$finalName,'show'=>true]);
-        $changer = ($finalName === 'Ketan Khanal')?true:false;
-        $view->setVariables(['posts'=>$posts,'writer'=>$finalName,'changer'=>$changer]);
-        return $view;
-    }
-    
     public function addAction(){
-        $view           = new jsonmodel();
-        $view->setVariables(['result'=>true,'message'=>'Your Post has been successfully submited']);
+        $view = new JsonModel();
         $postData       = $this->getRequest()->getPost();
-        $file           = $this->getRequest()->getFiles();
-        $httpagent = $this->getRequest()->getServer()['HTTP_USER_AGENT'];
-        $remoteaddr = $this->getRequest()->getServer()['REMOTE_ADDR'];
-        if (!$this->agent->getData() == $httpagent || !$this->agent->getData()==$remoteaddr){
-            return $view->setVariables(['result'=>false,'message'=>'Server seems to have crashed']);
+        $img            = $this->getRequest()->getFiles();
+        $postData       = json_decode(json_encode(json_decode($postData['data'])));
+        if(!$this->logic->handleLogic([$postData,$img],new addJob())){   
+            
         }
-        $titleValidator = new StringLength(['min'=>0,'max'=>50]);
-        $descriptionVlaidator = new StringLength(['min'=>0,'max'=>150]);
-        $emptyValidator = new NotEmpty();
-        if(!$emptyValidator($postData['blogPost']['title']) || !$emptyValidator($postData['blogPost']['content'])|| !$emptyValidator($postData['blogPost']['description'])){
-            $view->setVariables(['result'=>false,'message'=>"Please fill all the fields"]);
-            return $view;
-        }     
-        if(!$titleValidator->isValid($postData['blogPost']['title'])){
-            $message = 'description cannot excede more than '.$titleValidator->getMax().'characters';
-            $view->setVariables(['result'=>false,'message'=>'Title cannot be more than '.$titleValidator->getMax().'charcters']);
-            return $view;
-        }
-        if(!$descriptionVlaidator->isValid($postData['blogPost']['description'])){
-            $message = 'description cannot excede more than '.$descriptionVlaidator->getMax().'characters';
-            $view->setVariables(['result'=>false,'message'=>'Description cannot be more than '.$descriptionVlaidator->getMax().' characters']);
-            return $view;
-        }
-        $post= new Post([
-            'id'            => null,
-            'author'        => $postData['blogPost']['author'],
-            'title'         => $postData['blogPost']['title'],
-            'date'          => $postData['blogPost']['date'],
-            'content'       =>$postData['blogPost']['content'],
-            'description'   => $postData['blogPost']['description'],
-            'fbId'          => $postData['blogPost']['fbId'],
-            'post'          => '',
-            'status'        =>Post::DEFAULT_STATUS
-        ]);
-        $post->setImage($file);
-        $resultFromSave =$this->postService->save($post) ;
-        if(!$resultFromSave[Post::RESULT]){
-            $view->setVariables(['result'=>false,'message'=>$resultFromSave[Post::MESSAGE]]);
-            return $view;
-        }
-        //mailGenerator::GENERATEEMAIL($postData['blogPost']['email']);
         return $view;
     }
-    
+    public function deleteAction(){
+        if(!$logic->handleLogic($PostData,new deleteJob())){
+         
+        }
+    }
+    public function updateAction(){
+        if(!$logic->handleLogic($PostData,new updateJob())){
+          
+        }
+    }
+    private function getLogic(){
+        return $this->logic;
+    }
 }

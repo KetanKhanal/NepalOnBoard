@@ -1,24 +1,9 @@
 <?php echo $this->doctype(); ?>
 <html lang="en">
     <head>
+        <base href="/house/">
         <meta charset="utf-8">
-        <?php   
-            
-                $this->headMeta()->setProperty('fb:app_id','596409587196547');
-                 if(isset($this->title)){
-                $this->headMeta()->setProperty('og:type','article')
-                ->setProperty('og:url','http://nepalonboard.com/blog/show/'.$this->id)
-                ->setProperty('og:title',$this->title)
-                ->setProperty('og:site_name','Nepal On-board')
-                ->setProperty('og:image','http://nepalonboard.com/img/posts/post'.$this->id.'.jpg')
-                ->setProperty('og:image:type','image/jpg')
-                ->setProperty('og:image:width',"400")
-                ->setProperty('article:author','https://www.facebook.com/profile.php?id='.$this->fbId)
-                ->setProperty('og:image:height',"400")
-                ->setProperty('og:description',$this->description);       
-            }
-        ?>
-        <?php echo $this->headTitle('Nepal on board -blog') ?>
+        <?php echo $this->headTitle('Nepal on board -house') ?>
         <?php echo $this->headMeta()
             ->appendName('viewport', 'width=device-width')
             ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
@@ -26,22 +11,33 @@
             ->appendName('description','Nepalonboard, This is an online booking system targeted at international students to make their journey to new country smooth. ')
             ->appendName('apple-mobile-web-app-capable','yes')
             ->appendName('keywords','booking system, nepalonboard, accommodation, share house, flights, Australia,nepal on board blog')
-          
-        ?>
-        
+           
+        ?>   
         <!-- Style -->
         <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'logo', 'href' => $this->basePath() . '/img/newnobsmall.ico'))
             ->prependStylesheet($this->basePath('javascript/dropzone-4.3.0/dist/min/dropzone.min.css'))
+            ->prependStylesheet($this->basePath('bower_components/fullpage.js/dist/jquery.fullpage.css'))
             ->prependStylesheet($this->basePath('bower_components/font-awesome/css/font-awesome.min.css'))
             ->prependStylesheet($this->basePath('css/style.css'))
+            ->prependStylesheet($this->basePath('bower_components/ideal-image-slider/ideal-image-slider.css'))
             ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))?>
+            ->prependStylesheet($this->basePath('bower_components/jquery-ui/themes/base/jquery-ui.min.css'))
+            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+            ->prependStylesheet($this->basePath('css/house/house-style.css'))
+            ->prependStylesheet($this->basePath('bower_components/angular-material/angular-material.min.css'))?>
         <!-- Scripts -->
         <?php echo $this->headScript()
-            ->prependFile($this->basePath('javascript/dropzone-4.3.0/dist/min/dropzone.min.js'))
-            ->prependFile($this->basePath('javascript/onboard.blog.js'))
+            ->prependFile($this->basePath('bower_components/jquery-ui/jquery-ui.min.js'))      
             ->prependFile($this->basePath('js/bootstrap.min.js'))
-            ->prependFile($this->basePath('bower_components/jquery-ui/jquery-ui.min.js'))
+            ->prependFile($this->basePath('bower_components/angular-route/angular-route.min.js'))
+            ->prependFile($this->basePath('bower_components/angular-aria/angular-aria.min.js'))
+            ->prependFile($this->basePath('bower_components/angular-animate/angular-animate.min.js'))
+            ->prependFile($this->basePath('bower_components/angular-material/angular-material.min.js'))
+            ->prependFile($this->basePath('bower_components/angular/angular.min.js'))
+            ->prependFile($this->basePath('javascript/dropzone-4.3.0/dist/min/dropzone.min.js'))
+            ->prependFile($this->basePath('bower_components/fullpage.js/dist/jquery.fullpage.min.js'))
+            ->prependFile($this->basePath('bower_components/jquery-ui/jquery-ui.min.js'))            
+            ->prependFile($this->basePath('javascript/onboard.house.js'))
             ->prependFile($this->basePath('js/jquery.min.js'))
             ->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
             ->prependFile($this->basePath('js/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',)); 
@@ -54,42 +50,22 @@
             ga('create', 'UA-79358160-1', 'auto');
             ga('send', 'pageview');
         </script>
+           <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB56xw8q2FvZKEyLWhl7Wxbp1sejoKjb3E&libraries=places"
+    async defer></script> 
     </head>
-    <body>
+    <body  >
          <div id="loading" ></div>
-        <div class="col-md-12 changeMe " id="blog-navbar">
-            <div id="home-logo" class="col-xs-2  "><img style="width:75px; height:75px;" src="<?php echo $this->basePath() . '/img/newnobsmall.svg'?>"/> </div>
-            <?php if(isset($this->writer)):?>
-                <div class="col-md-7 col-xs-6" style="top:1.5em;" id="userNameContainer">
-                    <h2 id="user">
-                        <?php echo 'Hi '.$this->writer;?>
-                    </h2>
-                </div>
-            <?php endif;?>
-            <?php if($this->show):?><div class="col-md-2 col-xs-4" id="blog-menu-nav-container" style="float:right;top:3em"><a href="/blog" id="blog-menu-nav" style="" class="NepalOnBoardLink">Blog Menu</a></div><?php endif;?>
-             <?php if(!$this->show):?>
-                <div class="col-md-8 col-sm-8 col-xs-7" id="blog-header" >
-                   <h1 style="display:none" id="blog-heading"><span class="line">Blog</span></h1>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-3" id="share-your-experience-block">     
-                    <h4><a class="shareYourExperience">Write your own blog</a></h4>
-                </div>
-             <?php endIf ?>
+         <div class="col-md-12 " id="house-top-container" >
+            <div id="home-logo" class="col-xs-2 col-md-2 ">
+                <img id="our-logo" src="<?php echo $this->basePath() . '/img/newnobsmall.svg'?>"/> 
+            </div> 
+            <div id="house-login-container" class="col-md-2 ">
+            </div>
         </div>
-        <div class="NepalOnBoardContainer changeMe" id="blog-body" > 
-            <?php echo $this->content; ?>
-        </div>   
-        <?php echo $this->loginModal;?>
-         <script>
-             function checkLogin(){
-                 FB.getLoginStatus(function(response){
-                   if(response.status === 'connected'){
-                       FB.api('/me/',function(res){
-                           window.location.assign('/blog/writer/'+res.name.replace(/\s+/g,'-'));  
-                       });
-                   }
-                 });    
-             }
-         </script>
+        <div>
+         <div id="house-body-container">
+             <?php echo $this->content;?>
+         </div>
+        </div>
     </body>
 </html>

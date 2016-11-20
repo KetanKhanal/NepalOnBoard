@@ -1,0 +1,51 @@
+ <script type = "text/ng-template" id = "pictures.htm">
+     <div ng-controller="picturesController" id="pt-ct">
+            <div id="the-drop-zone">
+              <div   class="theAddButtonContainer col-md-3  " data-image="image1">
+                <div id="a" class="theAddButton " >
+                    <span class="glyphicon glyphicon-plus"></span>
+                </div>
+                
+              </div>
+      <div  class="theAddButtonContainer col-md-3  " data-image="image2">
+                <div id="b" class="theAddButton " >
+                    <span class="glyphicon glyphicon-plus"></span>
+                </div>
+               
+              </div>
+      <div  class="theAddButtonContainer col-md-3  " data-image="image3" >
+                <div id="c" class="theAddButton " >
+                    <span class="glyphicon glyphicon-plus"></span>
+                </div>
+                
+              </div>
+      <div  class="theAddButtonContainer col-md-3  " data-image="image4">
+                <div id="d" class="theAddButton " >
+                    <span class="glyphicon glyphicon-plus"></span>
+                </div>
+                
+              </div>
+              <div id="preview-container">
+                <div class="the-template col-md-12">
+                    <div  class="uploaded-photo" >
+                        <img data-dz-thumbnail />
+                    </div>
+                    <h3 style="display:none;position:absolute;top:30px;left:110px;color:black"  class="delete">Delete</h3>                
+                   
+                </div>
+                
+                </div>
+            </div>
+             <div class="col-md-12">
+            <div data-ng-repeat="(pos,imageId) in imageIds"  class="imageDescriptionContainer col-md-3 col-sm-3 col-xs-12" ng-mouseOver="imageId.active=true" ng-mouseOut="imageId.active=false">
+                   <input  ng-focus="imageId.val=true" style="margin-left:{{7*pos+'px'}}" ng-blur="imageId.val=false" type="text" name="host[{{imageId.name}}]"  id="{{imageId.name}}" placeholder="Image Description" class="imageDescription inputLevel1 " data-ng-model="sayings[imageId.name]" ng-change="checkChange()"/>
+                    <span  ng-show="imageId.val || imageId.active" style="left:{{0.5*(pos+0.9)+'em'}}" class="col-md-12  hostOptionBlock hostOptionPicture">
+                        <span data-ng-repeat="des in description" data-ng-click="setDes($event)" data-val="{{des}}" class="hostOptionBlockOption">{{des}}</span> 
+                    </span>
+            </div> 
+      </div>
+     </div>
+<div id="forAll"class="theAddButton dz-clickable">
+
+</div>
+    </script>

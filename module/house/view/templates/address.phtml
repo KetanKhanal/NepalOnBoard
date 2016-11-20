@@ -1,0 +1,33 @@
+  <script type = "text/ng-template" id = "address.htm">
+<div ng-controller="addressController">
+            <div class=" col-md-2 col-xs-12 form-group">
+            <span>
+                <input   ng-change="checkChange()" placeholder="eg. Unit 2" class="form-control inputLevel1" name="host[unit]" id="unit"  ng-model="sayings.unit" type="text" >
+            </span>
+
+        </div>
+        <div class=" col-md-3 col-xs-12 form-group">
+            <span>
+                <input   ng-change="checkChange()" placeholder="eg. 308 Example Avenue" class="form-control inputLevel1" name="host[Street]" id="street"  ng-model="sayings.street" type="text" >
+            </span>
+
+        </div>
+        <div class="col-md-3 col-xs-12 form-group">
+            <span>
+                <input  ng-change="checkChange()" placeholder="Suburb" class="form-control inputLevel1 " name="host[Suburb]" id="suburb" ng-model="sayings.suburb" type="text"/>
+             </span>
+        </div>
+        <div class="col-md-2 col-xs-12 form-group">
+            <span>
+                <input   ng-change="checkChange()" placeholder="State" class="form-control inputLevel1" name="host[State]" id="state" ng-model="sayings.state" type="text"/>
+             </span>
+        </div>
+        <div class="col-md-2 col-xs-12 form-group">       
+            <span>
+                <input   ng-change="checkChange()" placeholder="Postcode" class="form-control inputLevel1" name="host[Post]" id="postcode" ng-model="sayings.postcode" type="text"/>
+             </span>
+        </div>
+</div>
+    
+    </script>
+ 

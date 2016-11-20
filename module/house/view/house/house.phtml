@@ -1,0 +1,46 @@
+
+<section  class="container">
+    <div id="house-find-block" class="col-md-10 col-md-push-1 col-xs-8">
+        <div id="house-find-heading">
+            <h2>find a place to stay</h2>
+        </div>
+        <div>
+            <form>
+                <label class="radio-inline"><input name="country" id="australia" type="radio" value='Australia'/>Australia</label>         
+            </form>
+        </div>
+        <div class="col-md-12 input-group-lg" id="house-search-bar">
+            <form role="form" id="house-search-form" class="form-inline">
+                <input placeholder="destination" type="text" id="destination"  class="houseInput"/>
+                    <span class="houseSearchIconContainer">
+                        <i class="fa fa-3x fa-location-arrow"> </i>
+                    </span>
+                <input placeholder="arrival date" type="text" id="arrival" class="houseDate houseInput"/>
+                    <span class="houseSearchIconContainer">
+                        <i class="fa fa-3x fa-calendar"> </i>
+                    </span>
+                <input placeholder="postcode" type="text" id="postcode" class=" houseInput"/>
+                    <span class="houseSearchIconContainer">
+                        <i class="fa fa-3x fa-code"> </i>
+                    </span>
+                <div role="button" id="search-button-container" ><i id="house-search-button" class="fa fa-4x fa-search"></i></div>
+            </form>
+        </div>
+    </div>
+    <div id="house-share-button-container" class="col-md-8 col-md-push-2 col-xs-8"> 
+        <button id="house-share-button" class='btn btn-lg'><h1>share as a host</h1></button>
+    </div>
+</section>
+<section id="house-available-container" class="container-fluid">
+    <div class="col-md-4">
+        <div class="BottomButtons">
+            <h3 class="sign" data-sign="up">Come on board</h3>
+        </div>
+    </div>
+    <div class="col-md-4">
+            <h3 class="sign" data-sign="in">Sign In</h3>
+    </div>
+</section>
+      <?php echo $this->hostModal;?>
+
+       <?php echo $this->signModal;?>

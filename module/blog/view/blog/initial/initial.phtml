@@ -1,6 +1,6 @@
 <section class="col-md-12" id="sort-block" >
     <div class="container">
-            <div class="col-md-2 col-sm-12 col-xs-12"><button class="sort btn   btn-lg " id="ascending" value="0">old posts first</button></div>
+            <div class="col-md-2 col-sm-12 col-xs-12"><button class="sort btn   btn-lg " id="ascending" value="4">old posts first</button></div>
             <div class="col-md-2 col-sm-12 col-xs-12"><button class="sort btn  btn-lg  " id="descending" value="1">new posts first</button></div>
             <div class="col-md-2 col-sm-12 col-xs-12"><button class="sort btn   btn-lg  " id="descending" value="2">A-Z</button></div>
             <div class="col-md-6 col-sm-12 col-xs-12">
@@ -19,7 +19,7 @@
 </section>
 <section class="col-md-12 col-sm-12 com-lg-12" id="new-posts" data-authors='<?php echo json_encode($this->authors);?>'>
     <?php $postsArray = array_chunk($this->posts,2,false);?>
-    
+ 
     <div id="our-slider-container" class="container" >
         <div id="our-slider" class="carousel slide" >
             <div class="carousel-inner" role="listbox">

@@ -1,0 +1,363 @@
+.houseFont{
+    font-family: Lato !important;
+}
+
+.extraInputContainer,.extraInput{
+    padding-left:0 !important;
+}
+.extraInput{
+    width:8em;
+}
+
+/*// code below is to remove up and down arrow in the number input field*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/*code for disabling up and down arrow on the number input field ends*/
+
+
+.formIcon{
+   font-size: 25px;
+   visibility: hidden;
+}
+.extraCheckContainer{
+    position:relative;
+    left: 2em;
+}
+input[type=checkbox]{
+    -ms-transform:scale(2);
+    -webkit-transform:scale(1.5);
+}
+.formIconYes{
+    color: black;
+}
+
+.over:hover{
+    cursor: pointer;
+}
+.set{
+    display: none;
+}
+body{
+    background-image:url('../../img/bed.jpg') !important;
+    background-position:center !important;
+    background-origin:content-box !important;
+    background-repeat: no-repeat !important;
+    overflow: hidden;
+    margin-right: 15px !important;
+}
+#home-logo{
+   top:0 !important; 
+   padding:0;
+}
+
+#house-top-container{
+    padding:0 !important;
+}
+#our-logo{
+    width:100px; 
+    height:100px;
+}
+#house-login-container{
+    padding-top:1em;
+    float:right !important;
+    padding-left: 4% !important;
+    text-align:center ;
+}
+#house-login-link{
+ font-size:2.5em; 
+ text-decoration: underline !important;
+ 
+}
+#house-body-container::before ,#house-share-button-container::before{
+    content:' ';
+    height:30px;
+    display: block;
+}
+
+#house-find-block{
+    border:3px groove #000000;
+    height:300px;
+}
+#house-find-heading{
+    background-color:black;
+    height:100px;
+    padding:0.5em 0 0 1.5em;
+    color:white;
+    width:32%;
+    position:relative;
+    top: -4em;
+    left: 21em;
+    border:1px groove white;
+} 
+
+#house-search-bar{
+    border:2px groove #5fdb0b;
+    height:80px;
+    position:relative;
+    bottom:-27%;
+    background-color:white;
+}
+.houseInput{
+    height:76px;
+    width:30%;
+    border:none;
+     margin-left: -0.6em;
+    border-left: 2px groove rgba(95, 219, 11, 0.45);
+    font-size: 2em !important;
+    padding-left:3em;
+}
+
+#search-button-container{
+   float: right;
+    position: relative;
+    height: 76px;
+    clear: left;
+    border-left: 2px groove rgba(95, 219, 11, 0.45);
+       right: -1em;
+    padding-top: 0.5em;
+    background-color: white;
+        padding-left: 2em;
+    width: 8em;
+    color: rgba(95,291,11,0.45);
+    top: -76px;
+/*    background-image: -webkit-linear-gradient(right,#db6d6d,#7c2222);*/
+}
+
+
+#search-button-container:hover{
+    color: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+}
+.houseSearchIconContainer{
+    position: relative;
+    right: 28%;
+    color:rgba(95, 219, 11,0.6);
+}
+
+.houseInput:focus,.houseInput:active{
+    outline:white !important;
+}
+#house-share-button{
+    width:100%;
+    background-image:-webkit-linear-gradient(right, rgb(95, 219, 11), rgba(95, 219, 11,0.8),rgba(95, 219, 11,0.4));
+    border-radius: 0;
+    outline-width: 2px;
+    outline-color: white;
+    outline-style: groove;
+    color:white;
+}
+#house-share-button:focus{
+    outline-width: 2px !important;
+    outline-color: white !important;
+    outline-style: groove!important;
+    outline-offset: -0.5px !important;
+    color:#3b2d2d !important;
+}
+#house-share-button:hover{
+    outline-color:#73e5ff !important;
+}
+
+#house-available-container{
+    background-color:white !important;
+    margin-top:50px;
+    height:500px;
+    width:100%;
+    display: block;
+}
+/*Overwriting styles for jquery-ui theme used in board a house */
+.ui-corner-all{
+    border-radius: 0 !important;
+}
+
+.ui-widget{
+    border:2px groove rgba(95, 219, 11, 0.45) !important;
+}
+
+#ui-datepicker-div > .ui-icon{
+    color:rgba(95, 219, 11, 0.45) !important;
+}
+
+#ui-datepicker-div{
+    width:21em !important;
+    z-index:3000 !important;
+}
+
+#ui-id-1{
+    width:20.5em !important;
+}
+.ui-autocomplete{
+    outline-color:rgba(95, 219, 11, 0.45) !important;
+    height:auto !important;
+}
+.ui-autocomplete li:hover{
+     background-color:rgba(95, 219, 11, 0.5) !important;
+}
+.ui-state-focus{
+    background-color:rgba(95, 219, 11, 0.5) !important;
+}
+
+/*two modals used in the house template */
+.modal .modal-open{
+    overflow: hidden !important;
+    
+}
+.houseModal{
+    z-index : 2005 !important;
+}
+
+.houseModal > .modal-dialog{
+    margin-top:0 !important;
+    width:100% !important;
+}
+.houseModal .modal-content {
+    height:auto !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius:0 !important;
+}
+
+.houseModal .modal-footer {
+    margin-top:7%!important;
+}
+
+.houseModal .form-control:focus{
+    border-color:rgba(95, 219, 11, 0.7) !important;
+}
+
+/*Pictures form template*/
+
+#forAll{
+    visibility:hidden;
+}
+.theAddButtonContainer{
+    height:auto;
+}
+.theAddButton{
+    border: 1px solid rgba(157, 164, 241, 0.9);
+    outline: 2;
+    height: auto;
+    padding-top: 0.3em;
+    font-size: 5em;
+    padding-left: 1.5em;
+    color:rgba(157, 164, 241, 0.9);
+}
+.uploaded-photo > img{
+   outline: 1px solid rgba(143, 215, 149, 0.4);
+    cursor: pointer;
+    border: 1px solid rgb(147, 207, 146);
+    box-shadow: 1px yellow;
+    cursor: pointer;
+    height:auto;
+    width:inherit;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+}
+.uploaded-photo > h3:hover{
+    cursor: pointer;
+}
+.theAddButton:hover{
+    outline: 1px solid rgba(143, 215, 149, 0.4);
+    cursor: pointer;
+    border: 1px solid rgb(147, 207, 146);
+    box-shadow: 1px yellow;
+    color:rgba(143, 215, 149, 0.4);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+}
+
+#the-drop-zone{
+    background-color:inherit;
+    width:inherit !important;
+    height:50px !important;  
+}
+
+#host-modal .inputLevel1{
+    height:4em;
+    border-radius:2px;
+    background-color:rgb(249, 247, 247);
+    border-color:rgba(101, 255, 0, 0.7);
+    color: rgb(53, 53, 53);
+    font-size:1.5em;
+}
+
+ #host-modal ::-webkit-input-placeholder{
+    color: rgb(175, 173, 173);
+}
+
+#host-modal .houseDate , #dob{
+    padding-left:2.7em;
+}
+#host-modal .calendarIcon {
+    position: relative;
+    top: -2em;
+    left: 0.2em;
+    color: rgb(175, 173, 173);
+}
+
+#host-modal .YesOrNo {
+    color: rgb(175, 173, 173);
+}
+#host-modal #mattressBlock{
+    padding-top : 1.3em;
+}
+
+.expen{
+    height:2.9em;
+    padding-left:1em;
+    font-size:1.5em;
+    color: rgb(53, 53, 53);
+}
+
+
+#host-modal #info-block{
+    background-color:white;
+    color: black;
+}
+
+.hostOptionBlock{
+    background-color:rgb(189, 189, 189);
+    padding:0.5em;
+   
+}
+
+.hostOptionPicture{
+     position:relative;
+    top: 1.1em;
+}
+
+.hostOptionBlockOption{
+    padding:0.5em;
+}
+.hostOptionBlockOption:hover{
+    color:white;
+    cursor:pointer;
+}
+
+.imageDescription{
+    position:absolute;
+    top:0.5em;
+    height:2em !important;
+    width:93% !important;
+    
+}
+.imageDesMen{
+    position:relative;
+}
+
+.imageDescriptionContainer{
+    visibility:hidden;
+}
+
+#progressBar{
+    border-radius:5px;
+    position:absolute;
+    top:0;
+    left:0;
+    height:inherit !important;
+}
+.md-mode-determinate{
+    background-color:inherit !important;
+}
+.pac-container{
+    z-index:4000 !important;
+}

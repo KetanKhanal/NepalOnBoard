@@ -1,0 +1,33 @@
+ <script type = "text/ng-template" id = "information.htm">
+       <div ng-controller="informationController">
+            <div class=" col-md-3 col-xs-12 form-group">
+            <span>
+                <input ng-change="checkChange()" class="houseDate  inputLevel1 form-control "  placeholder="Available From" name="host[Available]" id="available" ng-model="sayings.availdate" type="text" >
+                <i class="calendarIcon fa fa-2x fa-calendar"> </i>
+            </span>
+        </div>
+        <div ng-mouseenter="activeType=true" ng-mouseleave="activeType=false" class="col-md-3 col-xs-12 form-group">
+            <span >
+                <input type="text" ng-focus="focusType=true" ng-blur="focusType=false"  placeholder="Room Share / House Share"  id="type" ng-model="sayings.shareType" ng-change="checkChange()" class="form-control inputLevel1 "/>
+                <span ng-show="activeType || focusType" class="hostOptionBlock">
+                    <span ng-click="setType($event)" data-val="room share" class="hostOptionBlockOption">Room share </span> 
+                    <span ng-click="setType($event)" data-val="house share" class="hostOptionBlockOption">house share</span>
+                </span>
+             </span>
+        </div>
+        <div class="col-md-3 col-xs-12 form-group">
+            <span>
+                <input class="form-control inputLevel1 " placeholder="No of People Required" name="host[People]" id="people" ng-model="sayings.peoplerec" ng-change="checkChange()"  type="number"/>
+             </span>
+        </div>
+        <div ng-mouseenter="activeMat=true" ng-mouseleave="activeMat=false" class="col-md-3 col-xs-12 form-group">
+            <span>
+                <input type="text" ng-focus="focusMat=true" ng-blur="focusMat=false" placeholder="can spare a bed or a mattress? " ng-focus="focusMat=true"  ng-model="sayings.mattress" ng-change="checkChange()"  class="form-control inputLevel1"/>
+                <span  ng-show="activeMat || focusMat" class="hostOptionBlock">
+                    <span ng-click="setMat($event)" data-val="yes" class="hostOptionBlockOption" >Yes</span> 
+                    <span ng-click="setMat($event)" data-val="no" class="hostOptionBlockOption">No</span><span>
+                </span>
+           <span>
+        </div>
+    </div>
+    </script>
