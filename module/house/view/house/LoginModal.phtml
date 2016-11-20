@@ -1,0 +1,21 @@
+<div class="modal fade" id="mymodal" >
+    <div class="modal-dialog">
+            <form  role="form"  method="POST"  id="form" >	
+                    <div class="modal-content">
+                        <div class="modal-header">
+<!--                            <div id="modal-img"><img style="height:70px;width:70px;" src="<?php echo $this->basePath() . '/img/newnobsmall.png';?>"/></div>-->
+                           <h3 id="modal-title">Write your own article here at Nepal Onboard</h3>
+                        </div>
+                        <div id="fb-login-button-container" class="modal-body">
+                            <fb:login-button id="login-fb" onlogin="checkLogin();" data-size="xlarge" scope="public_profile,email" >
+                                login with facebook
+                            </fb:login-button>
+                           <a id="continue-with" > <i class="fa  fa-2x fa-facebook"><span style="margin-left: 0.5em;">continue with facebook</span></i></a>
+                        </div>
+                        <div class="modal-footer">  
+                            <button class="cancel btn btn-danger">Cancel</button>
+                        </div>
+                    </div>
+            </form>
+    </div>
+</div>

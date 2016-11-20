@@ -32,6 +32,13 @@ return [
                 'driver_options' => [
                     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
                 ]
+              ],
+               'db3'=>[
+                'driver' => 'Pdo',
+                'dsn'    => 'mysql:dbname=house;host=localhost',
+                'driver_options' => [
+                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+                ]
               ]
          ]
       ],   
